@@ -661,7 +661,10 @@ body.lock { overflow: hidden; }
     if (p.img) imgs[0] = p.img;
     return Object.assign({}, p, { idx: i, preco: preco, sizes: sizes, stock: stock, pct: Math.round((1 - preco / p.original) * 100), img: imgs[0], imgs: imgs, search: norm(p.nome + ' ' + p.marca + ' ' + p.categoria + ' ' + p.departamento + (p.praia ? ' moda praia' : '')) });
   }).filter(function (p) { return p.stock > 0; });
-  var BY_ID = {}; P.forEach(function (p) { BY_ID[p.id] = p; });
+  // produtos "oculto" (ex.: teste de pagamento) só abrem pelo link direto, fora da vitrine
+  var ALL = P;
+  P = ALL.filter(function (p) { return !p.oculto; });
+  var BY_ID = {}; ALL.forEach(function (p) { BY_ID[p.id] = p; });
 
   // ---------- WhatsApp ----------
   function waLink(text) { var n = String(CFG.whatsapp || '').replace(/\D/g, ''); return 'https://wa.me/' + n + '?text=' + encodeURIComponent(text); }
@@ -1169,12 +1172,13 @@ body.lock { overflow: hidden; }
 
   // ---------- Estoque ao vivo e pagamento pelo site ----------
   function applyStock(est) {
-    P.forEach(function (p) {
+    ALL.forEach(function (p) {
       p.sizes = p.sizes.map(function (t) { var k = p.id + '|' + t.s; return { s: t.s, q: k in est ? Math.min(t.q, est[k]) : t.q }; }).filter(function (t) { return t.q > 0; });
       p.stock = p.sizes.reduce(function (a, t) { return a + t.q; }, 0);
     });
-    P = P.filter(function (p) { return p.stock > 0; });
-    BY_ID = {}; P.forEach(function (p) { BY_ID[p.id] = p; });
+    ALL = ALL.filter(function (p) { return p.stock > 0; });
+    P = ALL.filter(function (p) { return !p.oculto; });
+    BY_ID = {}; ALL.forEach(function (p) { BY_ID[p.id] = p; });
     BAG = BAG.filter(function (l) { return BY_ID[l.id]; }).map(function (l) { l.q = Math.min(l.q, stockOf(l.id, l.s)); return l; }).filter(function (l) { return l.q > 0; });
     saveBag();
     if (cur && !BY_ID[cur.id]) { location.hash = ''; closePdp(); } else if (cur) renderPdpSizes();

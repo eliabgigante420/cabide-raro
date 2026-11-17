@@ -89,7 +89,11 @@ window.CR_PRODUTOS = [
   { id: 'res-13', marca: 'Reserva', nome: 'Sapato Sider Couro Preto', categoria: 'Sapatos e mocassins', departamento: 'Masculino', tamanhos: [['42', 1]], original: 899.00 },
   { id: 'res-14', marca: 'Reserva', nome: 'Tênis Vila Camurça Off White', categoria: 'Tênis', departamento: 'Masculino', tamanhos: [['43', 1]], original: 899.00 },
   { id: 'res-15', marca: 'Reserva', nome: 'Tênis Vila Camurça Rattan', categoria: 'Tênis', departamento: 'Masculino', tamanhos: [['43', 1]], original: 899.00 },
-  { id: 'res-16', marca: 'Reserva', nome: 'Tênis Vila Knit Preto', categoria: 'Tênis', departamento: 'Masculino', tamanhos: [['41', 1], ['44', 1]], original: 799.00 }
+  { id: 'res-16', marca: 'Reserva', nome: 'Tênis Vila Knit Preto', categoria: 'Tênis', departamento: 'Masculino', tamanhos: [['41', 1], ['44', 1]], original: 799.00 },
+
+  // Produto de teste: não aparece na vitrine, só pelo link .../cabide-raro/#p-teste-01
+  // Apague esta linha quando terminar os testes de pagamento.
+  { id: 'teste-01', oculto: true, marca: 'Cabide Raro', nome: 'Produto de teste (não comprar)', categoria: 'Teste', departamento: 'Feminino', tamanhos: [['U', 20]], original: 1.00, preco: 1.00, img: 'img/compartilhar.jpg' }
 ];
 
 /* Quantas fotos cada peça tem em img/produtos (id.jpg, id-2.jpg, id-3.jpg...).
