@@ -547,14 +547,14 @@ body.lock { overflow: hidden; }
         <ol class="steps">
           <li><b>1</b><div><h3>Escolha as peças</h3><p>Selecione o tamanho e coloque na sacola. Cada peça tem poucas unidades.</p></div></li>
           <li><b>2</b><div><h3 class="h-site">Pague aqui no site</h3><h3 class="h-wa">Finalize pelo WhatsApp</h3><p class="h-site">Pix ou cartão em 3x sem juros (até 10x), no ambiente seguro do Mercado Pago.</p><p class="h-wa">A sacola vira uma mensagem pronta com as peças, os tamanhos e o total.</p></div></li>
-          <li><b>3</b><div><h3>Receba em casa</h3><p>Frete grátis com código de rastreio. Em Teixeira de Freitas, você também pode retirar.</p></div></li>
+          <li><b>3</b><div><h3>Receba em casa</h3><p>Postamos em até 3 dias úteis após o pagamento, com frete grátis e código de rastreio. Em Teixeira de Freitas, você também pode retirar.</p></div></li>
         </ol>
       </div>
       <div class="faq">
         <h2 class="wide">Dúvidas</h2>
         <details><summary>As peças são originais?</summary><p>Sim. Vendemos somente peças das próprias marcas. Você pode pedir a foto da etiqueta de qualquer peça antes de comprar.</p></details>
         <details><summary>Por que o preço é menor que na loja da marca?</summary><p>Compramos lotes de peças de coleção e repassamos com desconto. Por isso há poucas unidades e poucos tamanhos de cada.</p></details>
-        <details><summary>Como funciona a entrega?</summary><p>O frete é grátis para todo o Brasil e você recebe o código de rastreio quando a peça for postada. Em Teixeira de Freitas, você também pode retirar sem custo.</p></details>
+        <details><summary>Como funciona a entrega?</summary><p>O frete é grátis para todo o Brasil e postamos em até 3 dias úteis após a confirmação do pagamento. Você recebe o código de rastreio assim que a peça for postada. Em Teixeira de Freitas, você também pode retirar sem custo.</p></details>
         <details><summary>Posso trocar ou devolver?</summary><p>Sim. Você tem 7 dias depois de receber para desistir da compra, por qualquer motivo, e devolvemos todo o valor pago, frete incluso. Para trocar de tamanho, enquanto houver a peça, combine pelo WhatsApp no mesmo prazo. A peça deve voltar sem uso e com etiqueta.</p></details>
         <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito em até 3x sem juros, ou até 10x com juros. O pagamento é feito no Mercado Pago: seus dados de cartão não passam pela nossa loja.</p></details>
         <details><summary>Quero comprar várias peças ou revender</summary><p>Para compras maiores e atacado temos condições especiais. <a class="wa-link" href="#" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>.</p></details>
@@ -571,7 +571,7 @@ body.lock { overflow: hidden; }
     <div><h3>Marcas</h3><ul id="f-brands"></ul></div>
     <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou 3x sem juros</li><li>Frete grátis</li></ul></div>
   </div>
-  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span></div></div>
+  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026 · CNPJ 46.882.719/0001-02</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span></div></div>
 </footer>
 
 <div class="scrim" id="scrim" hidden></div>
@@ -1093,7 +1093,7 @@ body.lock { overflow: hidden; }
     var waP = waLink('Olá, Cabide Raro! Sobre meu pedido ' + id + ':');
     if (pago) {
       $('dr-body').innerHTML = '<div class="fim"><span class="ic"><svg aria-hidden="true"><use href="#i-ok"/></svg></span><h3 class="wide">Pedido confirmado!</h3>' +
-        '<p>Pedido <b>' + esc(id) + '</b>. O comprovante chega no seu e-mail pelo Mercado Pago. Vamos te chamar no WhatsApp com o código de rastreio ou para combinar a retirada.</p>' + itens + '</div>';
+        '<p>Pedido <b>' + esc(id) + '</b>. O comprovante chega no seu e-mail pelo Mercado Pago. Postamos em até 3 dias úteis e te chamamos no WhatsApp com o código de rastreio, ou para combinar a retirada.</p>' + itens + '</div>';
       $('dr-foot').innerHTML = '<button class="btn" type="button" data-nav="tudo">Continuar comprando</button><a class="wa-mini" href="' + waP + '" target="_blank" rel="noopener">Falar sobre meu pedido no WhatsApp</a>';
     } else if (espera) {
       $('dr-body').innerHTML = '<div class="fim wait"><span class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><h3 class="wide">Aguardando pagamento</h3>' +
