@@ -368,6 +368,47 @@ footer button.link:hover { color: var(--branco); text-decoration: underline; }
 .tot.save { color: var(--mata); font-weight: 600; }
 .dr-f small { color: var(--cinza); font-size: 12px; text-align: center; }
 
+/* Finalizar compra */
+.h-wa { display: none; }
+body.pay-off .h-wa { display: block; }
+body.pay-off .h-site { display: none; }
+.dr-note { background: #FFF4DB; color: #5C4300; font-size: 13px; line-height: 1.4; padding: 10px 12px; border-radius: 6px; margin: 12px 0 4px; }
+.wa-mini { font-size: 13px; color: var(--mata); text-align: center; font-weight: 600; text-underline-offset: 3px; }
+.co { display: grid; gap: 22px; padding-block: 12px 24px; }
+.co-back { justify-self: start; background: none; border: 0; padding: 4px 0; display: inline-flex; align-items: center; gap: 6px; color: var(--mata); font: inherit; font-weight: 600; font-size: 14px; cursor: pointer; }
+.co-back svg { width: 16px; height: 16px; }
+.co fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 12px; min-width: 0; }
+.co legend { font-weight: 800; font-variation-settings: "wdth" 120; text-transform: uppercase; font-size: 13px; letter-spacing: .02em; color: var(--mata); padding: 0; margin-bottom: 12px; }
+.co label { display: grid; gap: 5px; font-size: 13px; font-weight: 600; color: var(--texto); min-width: 0; }
+.co input[type="text"], .co input[type="email"], .co input[type="tel"] { height: 46px; width: 100%; box-sizing: border-box; border: 1px solid #CFC9BF; border-radius: 6px; padding: 0 12px; font: inherit; font-size: 16px; font-weight: 400; color: var(--texto); background: var(--branco); }
+.co input::placeholder { color: #A3A6A3; }
+.co input:focus { outline: 2px solid var(--mata); outline-offset: -1px; border-color: var(--mata); }
+.co input[aria-invalid="true"] { border-color: #B93A0B; }
+.co .fe { font-style: normal; font-size: 12px; font-weight: 500; color: #B93A0B; }
+.co .row2 { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px; }
+.co .row2.uf { grid-template-columns: minmax(0, 1fr) 76px; }
+.co-end { display: grid; gap: 12px; }
+.opt { display: grid; gap: 8px; }
+.opt label { display: flex; gap: 12px; align-items: flex-start; border: 1px solid #CFC9BF; border-radius: 8px; padding: 12px 14px; cursor: pointer; }
+.opt label:has(input:checked) { border-color: var(--mata); box-shadow: inset 0 0 0 1px var(--mata); background: #F5FAF6; }
+.opt input { accent-color: var(--mata); width: 18px; height: 18px; margin: 1px 0 0; flex: none; }
+.opt span { display: grid; gap: 2px; }
+.opt b { font-size: 14px; }
+.opt small { font-size: 12px; color: var(--cinza); font-weight: 400; }
+.cep-st { font-size: 12px; font-weight: 400; color: var(--cinza); }
+.co-err { background: #FDECE7; color: #7E2203; font-size: 13px; line-height: 1.4; padding: 10px 12px; border-radius: 6px; margin: 0; }
+.co-err a { color: inherit; font-weight: 700; }
+.fim { text-align: center; padding: 36px 4px 20px; display: grid; gap: 12px; justify-items: center; }
+.fim .ic { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: var(--menta); color: var(--mata); }
+.fim .ic svg { width: 30px; height: 30px; }
+.fim.wait .ic { background: #FFF0C2; color: #6B4E00; }
+.fim.no .ic { background: var(--pedra); color: var(--cinza); }
+.fim h3 { font-size: 22px; line-height: 1.1; }
+.fim p { color: var(--cinza); font-size: 14px; line-height: 1.5; max-width: 36ch; }
+.fim ul { list-style: none; padding: 0; margin: 8px 0 0; width: 100%; font-size: 14px; text-align: left; border-top: 1px solid var(--linha); }
+.fim li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--linha); }
+.dr-f .btn { width: 100%; }
+
 .toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 70; background: var(--texto); color: var(--branco); padding: 12px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; box-shadow: 0 6px 24px rgba(0,0,0,.2); }
 body.lock { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { *, *::before { transition: none !important; } }
@@ -377,6 +418,9 @@ body.lock { overflow: hidden; }
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.3.6 1.4 2 3 2.6.2.1.4 0 .5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.1 1.2-.9 1.7-.6.4-1.6.6-3.1 0a9.4 9.4 0 0 1-4.6-4.5c-.6-1.2-.4-2.6-.2-3.4Z" fill="currentColor"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -386,7 +430,7 @@ body.lock { overflow: hidden; }
   <symbol id="i-check" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
 </svg>
 
-<div class="ann gutter"><div class="wrap"><span>Grifes originais com <b id="ann-off">30%</b> de desconto</span><span>Parcele em até 10x no cartão</span><span>Envio para todo o Brasil</span></div></div>
+<div class="ann gutter"><div class="wrap"><span>Grifes originais com <b id="ann-off">30%</b> de desconto</span><span>3x sem juros ou até 10x no cartão</span><span>Frete grátis para todo o Brasil</span></div></div>
 
 <header class="hdr">
   <div class="gutter"><div class="wrap hdr-row">
@@ -432,8 +476,8 @@ body.lock { overflow: hidden; }
           </div>
           <div class="seals">
             <span><svg aria-hidden="true"><use href="#i-check"/></svg>100% originais</span>
-            <span><svg aria-hidden="true"><use href="#i-card"/></svg>Pix ou até 10x</span>
-            <span><svg aria-hidden="true"><use href="#i-truck"/></svg>Envio com rastreio</span>
+            <span><svg aria-hidden="true"><use href="#i-card"/></svg>Pix ou 3x sem juros</span>
+            <span><svg aria-hidden="true"><use href="#i-truck"/></svg>Frete grátis</span>
           </div>
         </div>
       </div>
@@ -453,8 +497,8 @@ body.lock { overflow: hidden; }
   <section class="benef gutter" aria-label="Vantagens">
     <div class="wrap">
       <div><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>100% originais</b><span>Peças das próprias marcas</span></p></div>
-      <div><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Até 10x no cartão</b><span>ou Pix</span></p></div>
-      <div><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Envio para todo o Brasil</b><span>com código de rastreio</span></p></div>
+      <div><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>3x sem juros</b><span>ou Pix, e até 10x no cartão</span></p></div>
+      <div><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Frete grátis</b><span>para todo o Brasil, com rastreio</span></p></div>
       <div><svg aria-hidden="true"><use href="#i-pin"/></svg><p><b>Retire na loja</b><span id="cidade">Teixeira de Freitas, BA</span></p></div>
     </div>
   </section>
@@ -502,17 +546,18 @@ body.lock { overflow: hidden; }
         <h2 class="wide">Como comprar</h2>
         <ol class="steps">
           <li><b>1</b><div><h3>Escolha as peças</h3><p>Selecione o tamanho e coloque na sacola. Cada peça tem poucas unidades.</p></div></li>
-          <li><b>2</b><div><h3>Finalize pelo WhatsApp</h3><p>A sacola vira uma mensagem pronta com as peças, os tamanhos e o total.</p></div></li>
-          <li><b>3</b><div><h3>Pague e receba</h3><p>Pix ou cartão em até 10x. Retire em Teixeira de Freitas ou receba em casa com rastreio.</p></div></li>
+          <li><b>2</b><div><h3 class="h-site">Pague aqui no site</h3><h3 class="h-wa">Finalize pelo WhatsApp</h3><p class="h-site">Pix ou cartão em 3x sem juros (até 10x), no ambiente seguro do Mercado Pago.</p><p class="h-wa">A sacola vira uma mensagem pronta com as peças, os tamanhos e o total.</p></div></li>
+          <li><b>3</b><div><h3>Receba em casa</h3><p>Frete grátis com código de rastreio. Em Teixeira de Freitas, você também pode retirar.</p></div></li>
         </ol>
       </div>
       <div class="faq">
         <h2 class="wide">Dúvidas</h2>
         <details><summary>As peças são originais?</summary><p>Sim. Vendemos somente peças das próprias marcas. Você pode pedir a foto da etiqueta de qualquer peça antes de comprar.</p></details>
         <details><summary>Por que o preço é menor que na loja da marca?</summary><p>Compramos lotes de peças de coleção e repassamos com desconto. Por isso há poucas unidades e poucos tamanhos de cada.</p></details>
-        <details><summary>Como funciona a entrega?</summary><p>Enviamos para todo o Brasil com código de rastreio. O frete é calculado pelo CEP no WhatsApp. Em Teixeira de Freitas, você também pode retirar.</p></details>
+        <details><summary>Como funciona a entrega?</summary><p>O frete é grátis para todo o Brasil e você recebe o código de rastreio quando a peça for postada. Em Teixeira de Freitas, você também pode retirar sem custo.</p></details>
         <details><summary>Posso trocar?</summary><p>Combine a troca pelo WhatsApp em até 7 dias após receber, com a peça sem uso e com etiqueta.</p></details>
-        <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito em até 10x.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito em até 3x sem juros, ou até 10x com juros. O pagamento é feito no Mercado Pago: seus dados de cartão não passam pela nossa loja.</p></details>
+        <details><summary>Quero comprar várias peças ou revender</summary><p>Para compras maiores e atacado temos condições especiais. <a class="wa-link" href="#" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>.</p></details>
       </div>
     </div>
   </section>
@@ -523,7 +568,7 @@ body.lock { overflow: hidden; }
     <div><img src="img/logo/cabide-raro-logo-horizontal-branco.svg" alt="Cabide Raro"><p>Grifes brasileiras originais com preço de outlet.<br><span id="cidade-2">Teixeira de Freitas, BA</span></p></div>
     <div><h3>Departamentos</h3><ul><li><button class="link" type="button" data-nav="Feminino">Feminino</button></li><li><button class="link" type="button" data-nav="Masculino">Masculino</button></li><li><button class="link" type="button" data-nav="praia">Moda praia</button></li><li><button class="link" type="button" data-nav="calcados">Calçados</button></li></ul></div>
     <div><h3>Marcas</h3><ul id="f-brands"></ul></div>
-    <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou até 10x no cartão</li></ul></div>
+    <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou 3x sem juros</li><li>Frete grátis</li></ul></div>
   </div>
   <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span></div></div>
 </footer>
@@ -559,12 +604,12 @@ body.lock { overflow: hidden; }
       </div>
       <div class="pdp-btns">
         <button class="btn" type="button" id="pdp-add"><svg aria-hidden="true"><use href="#i-bag"/></svg>Adicionar à sacola</button>
-        <a class="btn ghost" id="pdp-wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Comprar pelo WhatsApp</a>
+        <a class="btn ghost" id="pdp-wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span id="pdp-wa-t">Tirar dúvida no WhatsApp</span></a>
       </div>
       <ul class="trust">
         <li><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>Peça original</b><span>Peça a foto da etiqueta antes de comprar.</span></p></li>
-        <li><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Pix ou até 10x no cartão</b><span>Pagamento combinado pelo WhatsApp.</span></p></li>
-        <li><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Envio com rastreio ou retirada</b><span id="pdp-city">Frete calculado pelo CEP.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Pix ou 3x sem juros</b><span id="pdp-pay">Pagamento seguro pelo Mercado Pago, até 10x no cartão.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Frete grátis</b><span id="pdp-city">Para todo o Brasil, com rastreio.</span></p></li>
       </ul>
     </div>
   </div></div>
@@ -585,6 +630,10 @@ body.lock { overflow: hidden; }
   var CFG = window.CR_CONFIG || {};
   var RAW = window.CR_PRODUTOS || [];
   var PARC = CFG.parcelas || 10;
+  var SJ = CFG.semJuros || 1;
+  var LOCAL = /^(localhost|127\.0\.0\.1)$/.test(location.hostname);
+  var API = String(CFG.api || (LOCAL ? 'http://localhost:8787' : '')).replace(/\/+$/, '');
+  var PAY = false; // vira true quando o servidor de pagamento responde
   var BRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
   var SIZE_ORDER = ['PP', 'P', 'M', 'G', 'GG'];
   var BRAND_ORDER = ['FARM', 'Animale', 'Vix Paula Hermanny', 'Reserva', 'Dress To'];
@@ -601,6 +650,7 @@ body.lock { overflow: hidden; }
   function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
   function money(v) { return BRL.format(v); }
   function sizeKey(s) { var i = SIZE_ORDER.indexOf(s); return i >= 0 ? i : 100 + Number(s); }
+  function instText(v) { return SJ > 1 ? 'ou ' + SJ + 'x de ' + money(v / SJ) + ' sem juros' : 'ou ' + PARC + 'x de ' + money(v / PARC); }
 
   var P = RAW.map(function (p, i) {
     var preco = typeof p.preco === 'number' ? p.preco : Math.max(Math.round(p.original * (1 - (CFG.desconto || 0)) / 10) * 10 - 0.10, 9.9);
@@ -617,6 +667,7 @@ body.lock { overflow: hidden; }
   function waLink(text) { var n = String(CFG.whatsapp || '').replace(/\D/g, ''); return 'https://wa.me/' + n + '?text=' + encodeURIComponent(text); }
   $('wa-top').href = waLink('Olá, Cabide Raro! Quero tirar uma dúvida.');
   $('wa-foot').href = $('wa-top').href;
+  document.querySelectorAll('.wa-link').forEach(function (a) { a.href = waLink('Olá, Cabide Raro! Quero saber das condições para compras maiores ou atacado.'); });
   ['cidade', 'cidade-2'].forEach(function (id) { if (CFG.cidade) $(id).textContent = CFG.cidade; });
   $('ann-off').textContent = Math.round((CFG.desconto || 0) * 100) + '%';
 
@@ -663,7 +714,7 @@ body.lock { overflow: hidden; }
       (p.stock === 1 ? '<span class="last">Última peça</span>' : '') + '</div>' +
       '<div class="info"><span class="brand">' + esc(p.marca) + '</span><h3>' + esc(p.nome) + '</h3>' +
       '<div class="pr num">' + (p.pct > 0 ? '<s>' + money(p.original) + '</s>' : '') + '<b>' + money(p.preco) + '</b></div>' +
-      '<span class="inst num">ou ' + PARC + 'x de ' + money(p.preco / PARC) + '</span>' +
+      '<span class="inst num">' + instText(p.preco) + '</span>' +
       '<div class="szs">' + p.sizes.map(function (t) { return '<span>' + esc(t.s) + '</span>'; }).join('') + '</div></div></a></article>';
   }
 
@@ -814,9 +865,9 @@ body.lock { overflow: hidden; }
     $('pdp-crumbs').textContent = p.departamento + ' / ' + p.categoria;
     $('pdp-from').textContent = money(p.original); $('pdp-pct').textContent = p.pct + '% off';
     $('pdp-now').textContent = money(p.preco);
-    $('pdp-inst').textContent = 'ou ' + PARC + 'x de ' + money(p.preco / PARC) + ' no cartão';
+    $('pdp-inst').textContent = instText(p.preco) + ' no cartão';
     $('pdp-save').textContent = 'Você economiza ' + money(p.original - p.preco) + ' em relação à loja da marca';
-    $('pdp-city').textContent = 'Frete pelo CEP ou retirada em ' + (CFG.cidade || 'nossa loja') + '.';
+    $('pdp-city').textContent = 'Para todo o Brasil, com rastreio, ou retirada em ' + (CFG.cidade || 'nossa loja') + '.';
     var rel = P.filter(function (o) { return o.id !== p.id && (o.categoria === p.categoria || o.marca === p.marca); });
     rel.sort(function (a, b) { return (b.categoria === p.categoria) - (a.categoria === p.categoria) || a.idx - b.idx; });
     $('pdp-rel').innerHTML = rel.slice(0, 4).map(card).join('');
@@ -854,7 +905,7 @@ body.lock { overflow: hidden; }
     else if (inBag >= t.q) { note.textContent = 'Você já colocou todas as unidades deste tamanho na sacola.'; note.className = 'sz-note warn'; }
     else note.textContent = t.q === 1 ? 'Última unidade neste tamanho.' : t.q + ' unidades neste tamanho.';
     $('pdp-add').disabled = !t || inBag >= t.q;
-    $('pdp-wa').href = waLink('Olá, Cabide Raro! Quero comprar:\n' + p.nome + ' (' + p.marca + ')' + (curSize ? ', tamanho ' + curSize : '') + ', ' + money(p.preco) + '\n\nAinda está disponível?');
+    $('pdp-wa').href = waLink('Olá, Cabide Raro! ' + (PAY ? 'Tenho uma dúvida sobre:' : 'Quero comprar:') + '\n' + p.nome + ' (' + p.marca + ')' + (curSize ? ', tamanho ' + curSize : '') + ', ' + money(p.preco) + '\n\nAinda está disponível?');
   }
   $('pdp-sizes').addEventListener('click', function (e) { var b = e.target.closest('.sz'); if (!b) return; curSize = b.dataset.sz; renderPdpSizes(); });
   $('pdp-add').addEventListener('click', function () { if (!cur || !curSize) return; addToBag(cur.id, curSize); renderPdpSizes(); openBag(); toast('Adicionado à sacola'); });
@@ -880,14 +931,20 @@ body.lock { overflow: hidden; }
     if (l) l.q = Math.min(l.q + 1, stockOf(id, s)); else BAG.push({ id: id, s: s, q: 1 });
     saveBag(); renderBag();
   }
+  function bagCount() { return BAG.reduce(function (a, l) { return a + l.q; }, 0); }
+  function bagTotals() { var t = { tot: 0, orig: 0 }; BAG.forEach(function (l) { var p = BY_ID[l.id]; t.tot += p.preco * l.q; t.orig += p.original * l.q; }); return t; }
   function renderBag() {
-    var n = BAG.reduce(function (a, l) { return a + l.q; }, 0);
+    var n = bagCount();
     document.querySelectorAll('.bag-count').forEach(function (el) { el.textContent = n; el.dataset.n = n; });
+    if (coStep === 'fim') return;
+    if (!BAG.length) coStep = null;
+    $('dr-title').textContent = coStep === 'dados' ? 'Finalizar compra' : 'Sacola';
     if (!BAG.length) {
-      $('dr-body').innerHTML = '<div class="dr-empty"><svg aria-hidden="true"><use href="#i-bag"/></svg><p>Sua sacola está vazia.</p><button class="btn" type="button" data-nav="tudo">Ver peças</button></div>';
+      $('dr-body').innerHTML = noteHtml() + '<div class="dr-empty"><svg aria-hidden="true"><use href="#i-bag"/></svg><p>Sua sacola está vazia.</p><button class="btn" type="button" data-nav="tudo">Ver peças</button></div>';
       $('dr-foot').innerHTML = ''; return;
     }
-    $('dr-body').innerHTML = BAG.map(function (l, i) {
+    if (coStep === 'dados') return renderCheckout();
+    $('dr-body').innerHTML = noteHtml() + BAG.map(function (l, i) {
       var p = BY_ID[l.id], max = stockOf(l.id, l.s);
       return '<div class="line"><img src="' + esc(p.img) + '" alt=""><div><div class="b">' + esc(p.marca) + '</div><div class="n">' + esc(p.nome) + '</div><div class="m">Tamanho ' + esc(l.s) + '</div>' +
         '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="Diminuir"' + (l.q <= 1 ? ' disabled' : '') + '>−</button><span class="num">' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="Aumentar"' + (l.q >= max ? ' disabled' : '') + '>+</button></div></div>' +
@@ -895,15 +952,173 @@ body.lock { overflow: hidden; }
     }).join('');
     var tot = 0, orig = 0, msg = 'Olá, Cabide Raro! Quero comprar estas peças:\n\n';
     BAG.forEach(function (l) { var p = BY_ID[l.id]; tot += p.preco * l.q; orig += p.original * l.q; msg += '- ' + p.nome + ' (' + p.marca + '), tam. ' + l.s + (l.q > 1 ? ', ' + l.q + ' unidades' : '') + ': ' + money(p.preco * l.q) + '\n'; });
-    msg += '\nTotal: ' + money(tot) + '\nComo fica o frete e o pagamento?';
+    msg += '\nTotal: ' + money(tot) + '\nComo faço o pagamento?';
     $('dr-foot').innerHTML =
       '<div class="tot num"><span>Preço nas lojas das marcas</span><span><s>' + money(orig) + '</s></span></div>' +
       '<div class="tot save num"><span>Sua economia</span><span>' + money(orig - tot) + '</span></div>' +
+      '<div class="tot save num"><span>Frete</span><span>Grátis</span></div>' +
       '<div class="tot big num"><span>Total</span><span>' + money(tot) + '</span></div>' +
-      '<div class="tot num"><span></span><span>ou ' + PARC + 'x de ' + money(tot / PARC) + '</span></div>' +
-      '<a class="btn" href="' + waLink(msg) + '" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Finalizar pelo WhatsApp</a>' +
-      '<small>A mensagem já vai com as peças, os tamanhos e o total. O frete é combinado no WhatsApp.</small>';
+      '<div class="tot num"><span></span><span>' + instText(tot) + '</span></div>' +
+      (PAY
+        ? '<button class="btn" type="button" id="go-co"><svg aria-hidden="true"><use href="#i-lock"/></svg>Finalizar compra</button>' +
+          '<small>Pix ou cartão em até ' + SJ + 'x sem juros, no ambiente seguro do Mercado Pago.</small>' +
+          '<a class="wa-mini" href="' + waLink('Olá, Cabide Raro! Tenho uma dúvida sobre estas peças:\n\n' + msg.split('\n\n')[1] + '\n\nTotal: ' + money(tot)) + '" target="_blank" rel="noopener">Dúvidas ou compra no atacado? Fale no WhatsApp</a>'
+        : '<a class="btn" href="' + waLink(msg) + '" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Finalizar pelo WhatsApp</a>' +
+          '<small>A mensagem já vai com as peças, os tamanhos e o total.</small>');
   }
+
+  // ---------- Finalizar compra (Mercado Pago) ----------
+  var coStep = null, bagNote = '';
+  function noteHtml() { var h = bagNote ? '<p class="dr-note" role="status">' + esc(bagNote) + '</p>' : ''; bagNote = ''; return h; }
+  function loadDados() { try { return JSON.parse(localStorage.getItem('cr_dados') || '{}') || {}; } catch (e) { return {}; } }
+  function saveDados() { var f = $('co'); if (!f) return; var d = formVals(f); try { localStorage.setItem('cr_dados', JSON.stringify(d)); } catch (e) {} }
+  function formVals(f) { var d = {}; ['nome', 'email', 'telefone', 'cep', 'rua', 'numero', 'complemento', 'bairro', 'cidade', 'uf'].forEach(function (k) { d[k] = f.elements[k].value; }); d.entrega = f.elements.entrega.value || 'envio'; return d; }
+  function fld(name, label, d, attrs) { return '<label>' + label + '<input type="' + ((attrs && attrs.type) || 'text') + '" name="' + name + '" value="' + esc(d[name] || '') + '"' + ((attrs && attrs.extra) || '') + '></label>'; }
+  function maskTel(v) { v = v.replace(/\D/g, '').slice(0, 11); if (v.length > 10) return '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7); if (v.length > 6) return '(' + v.slice(0, 2) + ') ' + v.slice(2, 6) + '-' + v.slice(6); if (v.length > 2) return '(' + v.slice(0, 2) + ') ' + v.slice(2); return v; }
+  function maskCep(v) { v = v.replace(/\D/g, '').slice(0, 8); return v.length > 5 ? v.slice(0, 5) + '-' + v.slice(5) : v; }
+  function renderCheckout() {
+    var d = loadDados(), t = bagTotals(), n = bagCount(), ret = d.entrega === 'retirada';
+    $('dr-body').innerHTML = noteHtml() + '<form id="co" class="co" novalidate>' +
+      '<button class="co-back" type="button" id="co-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Voltar para a sacola</button>' +
+      '<fieldset><legend>Seus dados</legend>' +
+        fld('nome', 'Nome completo', d, { extra: ' autocomplete="name" required' }) +
+        fld('email', 'E-mail', d, { type: 'email', extra: ' autocomplete="email" inputmode="email" required' }) +
+        fld('telefone', 'Celular com DDD (WhatsApp)', d, { type: 'tel', extra: ' autocomplete="tel-national" inputmode="tel" placeholder="(73) 99999-9999" required' }) +
+      '</fieldset>' +
+      '<fieldset><legend>Entrega</legend><div class="opt">' +
+        '<label><input type="radio" name="entrega" value="envio"' + (ret ? '' : ' checked') + '><span><b>Receber em casa</b><small>Frete grátis para todo o Brasil, com rastreio</small></span></label>' +
+        '<label><input type="radio" name="entrega" value="retirada"' + (ret ? ' checked' : '') + '><span><b>Retirar em ' + esc((CFG.cidade || 'Teixeira de Freitas').split(',')[0]) + '</b><small>Combinamos o local e o horário pelo WhatsApp</small></span></label>' +
+      '</div><div id="co-end" class="co-end"' + (ret ? ' hidden' : '') + '>' +
+        '<label>CEP <span class="cep-st" id="cep-st"></span><input type="text" name="cep" value="' + esc(d.cep || '') + '" autocomplete="postal-code" inputmode="numeric" placeholder="00000-000"></label>' +
+        fld('rua', 'Rua', d, { extra: ' autocomplete="address-line1"' }) +
+        '<div class="row2">' + fld('numero', 'Número', d, { extra: ' inputmode="numeric"' }) + fld('complemento', 'Complemento', d, { extra: ' autocomplete="address-line2" placeholder="Opcional"' }) + '</div>' +
+        fld('bairro', 'Bairro', d) +
+        '<div class="row2 uf">' + fld('cidade', 'Cidade', d, { extra: ' autocomplete="address-level2"' }) + fld('uf', 'UF', d, { extra: ' autocomplete="address-level1" maxlength="2"' }) + '</div>' +
+      '</div></fieldset></form>';
+    $('dr-foot').innerHTML =
+      '<div class="tot num"><span>' + n + (n > 1 ? ' peças' : ' peça') + '</span><span>' + money(t.tot) + '</span></div>' +
+      '<div class="tot save num"><span>Frete</span><span>Grátis</span></div>' +
+      '<div class="tot big num"><span>Total</span><span>' + money(t.tot) + '</span></div>' +
+      '<p class="co-err" id="co-err" role="alert" hidden></p>' +
+      '<button class="btn" type="submit" form="co" id="co-go"><svg aria-hidden="true"><use href="#i-lock"/></svg>Ir para o pagamento</button>' +
+      '<small>Você paga no Mercado Pago com Pix ou cartão (' + SJ + 'x sem juros ou até ' + PARC + 'x). Os dados do cartão não passam pela nossa loja.</small>';
+  }
+  function openCheckout() { coStep = 'dados'; renderBag(); $('dr-body').scrollTop = 0; var f = $('co'); if (f) { var first = ['nome', 'email', 'telefone'].map(function (k) { return f.elements[k]; }).filter(function (i) { return !i.value; })[0]; if (first) first.focus({ preventScroll: true }); } }
+  function coError(html) { var el = $('co-err'); if (!el) return; el.innerHTML = html; el.hidden = !html; }
+  function markField(f, name, msg) { var i = f.elements[name]; i.setAttribute('aria-invalid', 'true'); var em = document.createElement('em'); em.className = 'fe'; em.textContent = msg; i.insertAdjacentElement('afterend', em); }
+  function clearMark(i) { if (!i.getAttribute('aria-invalid')) return; i.removeAttribute('aria-invalid'); var em = i.nextElementSibling; if (em && em.className === 'fe') em.remove(); }
+  var cepTimer, cepLast = '';
+  function buscaCep(f) {
+    var cep = f.elements.cep.value.replace(/\D/g, ''); if (cep.length !== 8 || cep === cepLast) return; cepLast = cep;
+    var st = $('cep-st'); st.textContent = 'buscando…';
+    fetch('https://viacep.com.br/ws/' + cep + '/json/').then(function (r) { return r.json(); }).then(function (j) {
+      if (!$('co') || j.erro) { if ($('cep-st')) $('cep-st').textContent = j && j.erro ? 'CEP não encontrado, preencha abaixo' : ''; return; }
+      var el = $('co').elements;
+      if (j.logradouro) el.rua.value = j.logradouro; if (j.bairro) el.bairro.value = j.bairro;
+      el.cidade.value = j.localidade || el.cidade.value; el.uf.value = j.uf || el.uf.value;
+      $('cep-st').textContent = '';
+      ['rua', 'bairro', 'cidade', 'uf'].forEach(function (k) { if (el[k].value) clearMark(el[k]); });
+      saveDados(); (j.logradouro ? el.numero : el.rua).focus();
+    }).catch(function () { if ($('cep-st')) $('cep-st').textContent = ''; });
+  }
+  function submitCheckout(e) {
+    e.preventDefault();
+    var f = $('co'); if (!f) return;
+    f.querySelectorAll('.fe').forEach(function (x) { x.remove(); });
+    f.querySelectorAll('[aria-invalid]').forEach(function (x) { x.removeAttribute('aria-invalid'); });
+    coError('');
+    var d = formVals(f), tel = d.telefone.replace(/\D/g, ''), bad = [];
+    if (d.nome.trim().split(/\s+/).length < 2) bad.push(['nome', 'Escreva nome e sobrenome']);
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email.trim())) bad.push(['email', 'Confira o e-mail']);
+    if (tel.length < 10 || tel.length > 11) bad.push(['telefone', 'Celular com DDD']);
+    if (d.entrega === 'envio') {
+      if (d.cep.replace(/\D/g, '').length !== 8) bad.push(['cep', 'CEP com 8 números']);
+      if (!d.rua.trim()) bad.push(['rua', 'Informe a rua']);
+      if (!d.numero.trim()) bad.push(['numero', 'Informe o número']);
+      if (!d.bairro.trim()) bad.push(['bairro', 'Informe o bairro']);
+      if (!d.cidade.trim()) bad.push(['cidade', 'Informe a cidade']);
+      if (!/^[A-Za-z]{2}$/.test(d.uf.trim())) bad.push(['uf', 'Ex.: BA']);
+    }
+    if (bad.length) { bad.forEach(function (b) { markField(f, b[0], b[1]); }); f.elements[bad[0][0]].focus(); return; }
+    saveDados();
+    var btn = $('co-go'); btn.disabled = true; btn.lastChild.textContent = 'Abrindo o pagamento…';
+    var body = { itens: BAG.map(function (l) { return { id: l.id, s: l.s, q: l.q }; }), cliente: { nome: d.nome.trim(), email: d.email.trim(), telefone: tel }, entrega: d.entrega };
+    if (d.entrega === 'envio') body.endereco = { cep: d.cep, rua: d.rua, numero: d.numero, complemento: d.complemento, bairro: d.bairro, cidade: d.cidade, uf: d.uf };
+    var falhou = function () {
+      btn.disabled = false; btn.lastChild.textContent = 'Ir para o pagamento';
+      coError('Não conseguimos abrir o pagamento agora. Tente de novo em instantes ou <a href="' + esc(waLink('Olá, Cabide Raro! Tentei finalizar a compra no site e não consegui. Pode me ajudar?')) + '" target="_blank" rel="noopener">finalize pelo WhatsApp</a>.');
+    };
+    fetch(API + '/pedido', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, status: r.status, j: j }; }); })
+      .then(function (res) {
+        if (res.ok && res.j.url) { try { localStorage.setItem('cr_pedido', res.j.id); } catch (e2) {} location.href = res.j.url; return; }
+        if (res.status === 409 && res.j.esgotados) {
+          var est = {}; res.j.esgotados.forEach(function (x) { est[x.id + '|' + x.s] = x.disponivel; });
+          applyStock(est); coStep = null;
+          bagNote = 'Alguém acabou de comprar uma das suas peças. Ajustamos a sacola com o que ainda está disponível.';
+          render(); renderBag(); return;
+        }
+        falhou();
+      }).catch(falhou);
+  }
+  $('drawer').addEventListener('click', function (e) {
+    if (e.target.closest('#go-co')) { openCheckout(); return; }
+    if (e.target.closest('#co-back')) { coStep = null; renderBag(); return; }
+    if (e.target.closest('[data-retry]')) { coStep = 'dados'; renderBag(); return; }
+  });
+  $('drawer').addEventListener('submit', function (e) { if (e.target.id === 'co') submitCheckout(e); });
+  $('drawer').addEventListener('input', function (e) {
+    var i = e.target, f = $('co'); if (!f || !f.contains(i)) return;
+    if (i.name === 'telefone') i.value = maskTel(i.value);
+    if (i.name === 'cep') { i.value = maskCep(i.value); clearTimeout(cepTimer); cepTimer = setTimeout(function () { buscaCep(f); }, 250); }
+    if (i.name === 'uf') i.value = i.value.toUpperCase();
+    clearMark(i);
+    saveDados();
+  });
+  $('drawer').addEventListener('change', function (e) {
+    if (e.target.name === 'entrega') { $('co-end').hidden = e.target.value === 'retirada'; saveDados(); }
+  });
+
+  // ---------- Volta do Mercado Pago ----------
+  function showResult(id, st, srv) {
+    var pago = st === 'approved' || (srv && (srv.status === 'pago' || srv.status === 'pago_sem_estoque'));
+    var espera = !pago && (st === 'pending' || st === 'in_process' || (srv && srv.status === 'aguardando_pagamento'));
+    if (pago && BAG.length) { BAG = []; saveBag(); renderBag(); }
+    $('dr-title').textContent = 'Seu pedido';
+    var itens = srv && srv.itens ? '<ul>' + srv.itens.map(function (i) { return '<li><span>' + esc(i.nome) + ', tam. ' + esc(i.s) + (i.q > 1 ? ' (' + i.q + ')' : '') + '</span></li>'; }).join('') + '<li><b>Total</b><b class="num">' + money(srv.total / 100) + '</b></li></ul>' : '';
+    var waP = waLink('Olá, Cabide Raro! Sobre meu pedido ' + id + ':');
+    if (pago) {
+      $('dr-body').innerHTML = '<div class="fim"><span class="ic"><svg aria-hidden="true"><use href="#i-ok"/></svg></span><h3 class="wide">Pedido confirmado!</h3>' +
+        '<p>Pedido <b>' + esc(id) + '</b>. O comprovante chega no seu e-mail pelo Mercado Pago. Vamos te chamar no WhatsApp com o código de rastreio ou para combinar a retirada.</p>' + itens + '</div>';
+      $('dr-foot').innerHTML = '<button class="btn" type="button" data-nav="tudo">Continuar comprando</button><a class="wa-mini" href="' + waP + '" target="_blank" rel="noopener">Falar sobre meu pedido no WhatsApp</a>';
+    } else if (espera) {
+      $('dr-body').innerHTML = '<div class="fim wait"><span class="ic"><svg aria-hidden="true"><use href="#i-clock"/></svg></span><h3 class="wide">Aguardando pagamento</h3>' +
+        '<p>Pedido <b>' + esc(id) + '</b>. Se você escolheu Pix, conclua o pagamento no app do seu banco. Assim que o Mercado Pago confirmar, separamos suas peças.</p>' + itens + '</div>';
+      $('dr-foot').innerHTML = '<button class="btn ghost" type="button" data-retry>Pagar de novo</button><a class="wa-mini" href="' + waP + '" target="_blank" rel="noopener">Falar sobre meu pedido no WhatsApp</a>';
+    } else {
+      $('dr-body').innerHTML = '<div class="fim no"><span class="ic"><svg aria-hidden="true"><use href="#i-x"/></svg></span><h3 class="wide">Pagamento não concluído</h3>' +
+        '<p>O pagamento não foi finalizado. Suas peças continuam na sacola e você pode tentar de novo, com outro cartão ou com Pix.</p></div>';
+      $('dr-foot').innerHTML = '<button class="btn" type="button" data-retry>Tentar de novo</button><a class="wa-mini" href="' + waP + '" target="_blank" rel="noopener">Precisa de ajuda? Fale no WhatsApp</a>';
+    }
+    return pago;
+  }
+  function checkReturn() {
+    var q = new URLSearchParams(location.search), id = q.get('pedido');
+    if (!id || !/^CR-[A-Z0-9]{8}$/.test(id)) return;
+    var st = q.get('collection_status') || q.get('status') || '';
+    try { history.replaceState(null, '', location.pathname + location.hash); } catch (e) {}
+    coStep = 'fim'; showResult(id, st, null); openBag();
+    if (!API) return;
+    var tries = 0;
+    (function poll() {
+      fetch(API + '/pedido/' + encodeURIComponent(id), { cache: 'no-store' }).then(function (r) { return r.ok ? r.json() : null; }).then(function (srv) {
+        if (coStep !== 'fim' || !srv) return;
+        var pago = showResult(id, st, srv);
+        if (!pago && ++tries < 8 && st !== 'null' && st !== 'rejected') setTimeout(poll, 3000);
+      }).catch(function () {});
+    })();
+  }
+
   $('dr-body').addEventListener('click', function (e) {
     var b = e.target.closest('[data-q]');
     if (b) { var l = BAG[+b.dataset.i]; l.q = Math.max(1, Math.min(l.q + Number(b.dataset.q), stockOf(l.id, l.s))); saveBag(); renderBag(); if (cur) renderPdpSizes(); return; }
@@ -912,7 +1127,7 @@ body.lock { overflow: hidden; }
   });
   var bagFocus = null;
   function openBag() { bagFocus = document.activeElement; $('drawer').hidden = false; $('scrim').hidden = false; document.body.classList.add('lock'); $('dr-close').focus({ preventScroll: true }); }
-  function closeBag() { $('drawer').hidden = true; $('scrim').hidden = true; if ($('pdp').hidden) document.body.classList.remove('lock'); if (bagFocus && bagFocus.focus) bagFocus.focus({ preventScroll: true }); }
+  function closeBag() { if (coStep === 'fim') { coStep = null; renderBag(); } $('drawer').hidden = true; $('scrim').hidden = true; if ($('pdp').hidden) document.body.classList.remove('lock'); if (bagFocus && bagFocus.focus) bagFocus.focus({ preventScroll: true }); }
   $('open-bag').addEventListener('click', openBag);
   $('dr-close').addEventListener('click', closeBag);
   $('scrim').addEventListener('click', closeBag);
@@ -952,7 +1167,34 @@ body.lock { overflow: hidden; }
     $('hero-prazo').title = 'Liquidação até ' + d + ' de ' + mes;
   })();
 
-  render(); renderBag(); route();
+  // ---------- Estoque ao vivo e pagamento pelo site ----------
+  function applyStock(est) {
+    P.forEach(function (p) {
+      p.sizes = p.sizes.map(function (t) { var k = p.id + '|' + t.s; return { s: t.s, q: k in est ? Math.min(t.q, est[k]) : t.q }; }).filter(function (t) { return t.q > 0; });
+      p.stock = p.sizes.reduce(function (a, t) { return a + t.q; }, 0);
+    });
+    P = P.filter(function (p) { return p.stock > 0; });
+    BY_ID = {}; P.forEach(function (p) { BY_ID[p.id] = p; });
+    BAG = BAG.filter(function (l) { return BY_ID[l.id]; }).map(function (l) { l.q = Math.min(l.q, stockOf(l.id, l.s)); return l; }).filter(function (l) { return l.q > 0; });
+    saveBag();
+    if (cur && !BY_ID[cur.id]) { location.hash = ''; closePdp(); } else if (cur) renderPdpSizes();
+  }
+  function setPay(on) {
+    PAY = on;
+    document.body.classList.toggle('pay-off', !on);
+    $('pdp-wa-t').textContent = on ? 'Tirar dúvida no WhatsApp' : 'Comprar pelo WhatsApp';
+    if (cur) renderPdpSizes();
+  }
+  if (!API) setPay(false);
+  render(); renderBag(); route(); checkReturn();
+  if (API) {
+    var ctl = window.AbortController ? new AbortController() : null;
+    setTimeout(function () { if (ctl) ctl.abort(); }, 6000);
+    fetch(API + '/estoque', { cache: 'no-store', signal: ctl ? ctl.signal : undefined })
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+      .then(function (est) { applyStock(est); setPay(true); render(); renderBag(); })
+      .catch(function () { setPay(false); });
+  }
 })();
 </script>
 

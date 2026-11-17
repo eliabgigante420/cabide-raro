@@ -12,7 +12,14 @@ window.CR_CONFIG = {
   // Para um preço específico, preencha "preco" no produto.
   desconto: 0.30,
 
+  // Parcelamento no cartão: máximo de parcelas e até quantas são sem juros.
+  // As parcelas sem juros também precisam ser ligadas na conta do Mercado Pago.
   parcelas: 10,
+  semJuros: 3,
+
+  // Endereço do servidor de pagamento (Cloudflare Worker). Vazio: a sacola
+  // finaliza pelo WhatsApp, como antes.
+  api: '',
 
   // Último dia da liquidação (aparece na capa com a contagem de dias).
   fimDaPromo: '2026-12-31T23:59:59',
