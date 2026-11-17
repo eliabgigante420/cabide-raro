@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E3B2C">
+<link rel="icon" type="image/svg+xml" href="img/logo/cabide-raro-icone-verde.svg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Cabide Raro">
+<meta property="og:title" content="Cabide Raro: grifes originais com 30% OFF">
+<meta property="og:description" content="FARM, Animale, Vix Paula Hermanny, Reserva e Dress To originais com 30% de desconto. Pix ou até 10x, envio com rastreio.">
+<meta property="og:url" content="https://eliabgigante420.github.io/cabide-raro/">
+<meta property="og:image" content="https://eliabgigante420.github.io/cabide-raro/img/compartilhar.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0}</style>
+<title>Cabide Raro</title>
+<meta name="description" content="Grifes brasileiras originais com preço de outlet: FARM, Animale, Vix Paula Hermanny, Reserva e Dress To.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&display=swap">
+<style>
+/* Layout: commerce store, light only by choice. Announcement bar, sticky header with search, banner grid, brand row, catalog with filter sidebar, product overlay, bag drawer. */
+:root {
+  --mata: #0E3B2C;
+  --mata-2: #175440;
+  --mata-3: #0A2C21;
+  --branco: #FFFFFF;
+  --preto: #000000;
+  --texto: #1A1A1A;
+  --cinza: #5F625F;
+  --cinza-2: #8A8D8A;
+  --pedra: #F1EEE9;
+  --pedra-2: #E6E1D8;
+  --menta: #CFE2D4;
+  --linha: #E3E0DA;
+  --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body { background: var(--branco); color: var(--texto); font-family: var(--font); font-size: 15px; line-height: 1.5; }
+h1, h2, h3, p { margin: 0; }
+img { display: block; max-width: 100%; }
+button { font: inherit; color: inherit; }
+a { color: inherit; }
+.gutter { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.wrap { max-width: 1320px; margin: 0 auto; }
+.wide { font-weight: 800; font-variation-settings: "wdth" 125; text-transform: uppercase; letter-spacing: -.01em; line-height: 1; }
+.num { font-variant-numeric: tabular-nums; }
+:focus-visible { outline: 3px solid var(--mata); outline-offset: 2px; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* Announcement */
+.ann { background: var(--mata-3); color: var(--branco); font-size: 13px; }
+.ann .wrap { display: flex; justify-content: center; gap: 36px; padding-block: 8px; overflow: hidden; white-space: nowrap; }
+.ann span:nth-child(n+2) { color: rgba(255,255,255,.8); }
+@media (max-width: 760px) { .ann span:nth-child(n+2) { display: none; } }
+
+/* Header */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 40; background: var(--branco); }
+.hdr { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 30; background: var(--branco); border-bottom: 1px solid var(--linha); }
+.hdr-row { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 28px; padding-block: 14px; }
+.logo img { height: 30px; width: auto; }
+.search { position: relative; max-width: 620px; width: 100%; justify-self: center; }
+.search input { width: 100%; height: 46px; border: 1.5px solid var(--linha); background: var(--pedra); border-radius: 999px; padding: 0 48px 0 20px; font: 500 15px var(--font); color: var(--texto); }
+.search input:focus { outline: none; border-color: var(--mata); background: var(--branco); }
+.search svg { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); width: 20px; height: 20px; color: var(--cinza); pointer-events: none; }
+.acts { display: flex; align-items: center; gap: 6px; }
+.act { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; cursor: pointer; padding: 8px 10px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px; }
+.act:hover { background: var(--pedra); }
+.act svg { width: 24px; height: 24px; flex: none; }
+.bag-btn { position: relative; }
+.bag-count { position: absolute; top: 2px; left: 26px; min-width: 18px; height: 18px; border-radius: 9px; background: var(--mata); color: var(--branco); font-size: 11px; font-weight: 700; display: grid; place-items: center; padding: 0 5px; }
+.bag-count[data-n="0"] { display: none; }
+.nav { border-top: 1px solid var(--linha); }
+.nav .wrap { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
+.nav .wrap::-webkit-scrollbar { display: none; }
+.nav button { flex: none; background: none; border: 0; border-bottom: 2.5px solid transparent; padding: 12px 14px 10px; font-weight: 600; font-size: 14px; cursor: pointer; color: var(--texto); white-space: nowrap; }
+.nav button:hover { color: var(--mata); }
+.nav button[aria-pressed="true"] { border-bottom-color: var(--mata); color: var(--mata); }
+@media (max-width: 760px) {
+  .hdr-row { grid-template-columns: auto 1fr auto; gap: 12px; padding-block: 10px; }
+  .logo img { height: 22px; }
+  .search { grid-column: 1 / -1; grid-row: 2; max-width: none; }
+  .search input { height: 42px; }
+  .act .lbl { display: none; }
+}
+
+/* Banners (verticais) */
+.banners { padding-block: 0 8px; }
+.banners .wrap { max-width: none; display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) minmax(0, 1fr); gap: 4px; height: clamp(560px, 46vw, 820px); }
+.bn { position: relative; overflow: hidden; border-radius: 0; background: var(--pedra-2); color: var(--branco); display: block; text-decoration: none; }
+.bn > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.bn:hover > img { transform: scale(1.03); }
+.bn-hit { position: absolute; inset: 0; z-index: 1; background: none; border: 0; padding: 0; cursor: pointer; }
+.bn-hit:focus-visible { outline-offset: -4px; }
+
+.bn-main > img { object-position: 50% 22%; }
+.bn-main::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,44,33,0) 30%, rgba(10,44,33,.55) 55%, rgba(10,44,33,.94) 80%, #0A2C21 100%); pointer-events: none; }
+.bn-main .top { position: absolute; left: 20px; right: 20px; top: 20px; z-index: 2; display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; pointer-events: none; }
+.pill { display: inline-flex; align-items: center; gap: 8px; background: var(--branco); color: var(--mata); font-weight: 700; font-size: 13px; padding: 8px 12px; border-radius: 999px; box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+.pill .dot { width: 8px; height: 8px; border-radius: 50%; background: #D94A1E; box-shadow: 0 0 0 0 rgba(217,74,30,.6); animation: pulse 1.8s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(217,74,30,.55); } 70% { box-shadow: 0 0 0 8px rgba(217,74,30,0); } 100% { box-shadow: 0 0 0 0 rgba(217,74,30,0); } }
+.ptag { pointer-events: auto; position: relative; z-index: 3; background: var(--branco); color: var(--texto); border-radius: 6px; padding: 12px 14px; display: grid; gap: 2px; text-decoration: none; box-shadow: 0 8px 28px rgba(0,0,0,.18); max-width: 220px; transition: transform .2s ease; }
+.ptag:hover { transform: translateY(-2px); }
+.ptag .b { font-size: 10px; font-weight: 800; font-variation-settings: "wdth" 125; text-transform: uppercase; color: var(--mata); letter-spacing: .02em; }
+.ptag .n { font-size: 13px; font-weight: 500; line-height: 1.25; }
+.ptag .row { display: flex; align-items: baseline; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+.ptag s { font-size: 12px; color: var(--cinza-2); }
+.ptag strong { font-size: 18px; font-weight: 800; font-variation-settings: "wdth" 112; }
+.ptag .go { font-size: 12px; font-weight: 700; color: var(--mata); margin-top: 4px; }
+
+.bn-main .top { left: max(20px, env(safe-area-inset-left, 0px)); }
+.bn-side .lab { right: max(14px, env(safe-area-inset-right, 0px)); }
+.bn-main .content { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding: clamp(20px, 2.6vw, 40px) clamp(20px, 2.6vw, 40px) clamp(20px, 2.6vw, 40px) max(clamp(20px, 2.6vw, 40px), env(safe-area-inset-left, 0px)); display: grid; gap: 16px; pointer-events: none; }
+.bn-main .kicker { font-size: 14px; font-weight: 600; color: var(--menta); }
+.bn-main h1 { display: grid; gap: 6px; }
+.bn-main h1 .big { font-size: clamp(64px, 7.6vw, 112px); line-height: .86; letter-spacing: -.03em; }
+.bn-main h1 .sub { font-size: clamp(20px, 2vw, 28px); line-height: 1.05; }
+.bn-main .ctas { display: flex; flex-wrap: wrap; gap: 10px; pointer-events: auto; position: relative; z-index: 3; }
+.btn-w { display: inline-flex; align-items: center; height: 50px; padding: 0 24px; background: var(--branco); color: var(--mata); font-weight: 700; border-radius: 999px; font-size: 15px; border: 0; cursor: pointer; text-decoration: none; }
+.btn-w:hover { background: var(--menta); }
+.btn-o { display: inline-flex; align-items: center; height: 50px; padding: 0 22px; background: transparent; color: var(--branco); font-weight: 600; border-radius: 999px; font-size: 15px; border: 1.5px solid rgba(255,255,255,.6); cursor: pointer; }
+.btn-o:hover { border-color: var(--branco); background: rgba(255,255,255,.08); }
+.seals { display: flex; flex-wrap: wrap; gap: 8px 16px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.18); }
+.seals span { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.9); }
+.seals svg { width: 18px; height: 18px; color: var(--menta); flex: none; }
+
+.bn-side > img { object-position: 50% 20%; }
+.bn-side > img.fit { object-fit: contain; object-position: 50% 38%; background: var(--fit-bg, var(--pedra-2)); }
+.bn-side .lab { position: absolute; left: 14px; right: 14px; bottom: 14px; z-index: 2; background: var(--branco); color: var(--texto); border-radius: 6px; padding: 14px 16px; display: grid; gap: 4px; pointer-events: none; }
+.bn-side .lab .off2 { justify-self: start; background: var(--mata); color: var(--branco); font-size: 11px; font-weight: 700; padding: 3px 7px; border-radius: 4px; }
+.bn-side .lab b { font-size: 20px; font-weight: 800; font-variation-settings: "wdth" 120; text-transform: uppercase; line-height: 1; letter-spacing: -.01em; }
+.bn-side .lab span { font-size: 13px; color: var(--cinza); }
+.bn-side .lab em { font-style: normal; font-weight: 700; color: var(--mata); font-size: 14px; }
+
+@media (max-width: 900px) {
+  .banners .wrap { grid-template-columns: 1fr 1fr; height: auto; }
+  .bn-main { grid-column: 1 / -1; aspect-ratio: 9 / 15; max-height: 760px; }
+  .bn-side { aspect-ratio: 3 / 4.2; }
+  .bn-side .lab { left: 8px; right: 8px; bottom: 8px; padding: 10px 12px; }
+  .bn-side .lab b { font-size: 15px; }
+  .bn-side .lab span { font-size: 12px; }
+}
+@media (max-width: 420px) {
+  .bn-main .top { left: 12px; right: 12px; top: 12px; flex-direction: column; align-items: flex-start; gap: 10px; }
+  .bn-main .top .ptag { align-self: flex-end; }
+  .pill { white-space: nowrap; font-size: 12px; }
+  .ptag { max-width: 168px; padding: 10px 12px; }
+  .ptag strong { font-size: 16px; }
+  .btn-w, .btn-o { height: 46px; padding: 0 18px; font-size: 14px; }
+  .seals span { font-size: 12px; }
+}
+@media (max-width: 600px) {
+  .bn-side .lab span:not(.off2) { display: none; }
+  .bn-side .lab em { font-size: 13px; }
+  .benef .wrap { gap: 8px; }
+  .benef div { padding: 12px; gap: 10px; }
+  .benef div span { display: none; }
+  .benef b { font-size: 13px; line-height: 1.25; }
+}
+@media (prefers-reduced-motion: reduce) { .pill .dot { animation: none; } }
+
+/* Benefits */
+.benef .wrap { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; padding-block: 18px; }
+.benef div { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--pedra); border-radius: 6px; }
+.benef svg { width: 26px; height: 26px; flex: none; color: var(--mata); }
+.benef b { display: block; font-size: 14px; }
+.benef span { font-size: 13px; color: var(--cinza); }
+@media (max-width: 900px) { .benef .wrap { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Brands */
+.brands { padding-block: 28px 8px; }
+.sec-h { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 16px; flex-wrap: wrap; }
+.sec-h h2 { font-size: 22px; }
+.sec-h p { color: var(--cinza); font-size: 14px; }
+.brand-row { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.brand-tile { border: 1.5px solid var(--linha); background: var(--branco); border-radius: 6px; padding: 22px 12px; cursor: pointer; display: grid; gap: 6px; justify-items: center; text-align: center; transition: border-color .15s, background .15s; }
+.brand-tile:hover, .brand-tile[aria-pressed="true"] { border-color: var(--mata); background: var(--pedra); }
+.brand-tile b { font-weight: 800; font-variation-settings: "wdth" 125; text-transform: uppercase; font-size: 16px; letter-spacing: .01em; }
+.brand-tile span { font-size: 13px; color: var(--cinza); }
+@media (max-width: 760px) { .brand-row { grid-template-columns: repeat(5, 150px); overflow-x: auto; padding-bottom: 4px; } }
+
+/* Catalog */
+.shop { padding-block: 32px 64px; }
+.shop .wrap { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 32px; align-items: start; }
+.filters { position: sticky; top: 140px; max-height: calc(100vh - 160px); overflow-y: auto; display: grid; gap: 4px; padding-right: 6px; }
+.f-head { display: none; }
+.fg { border-bottom: 1px solid var(--linha); padding-block: 14px; }
+.fg h3 { font-size: 14px; font-weight: 700; margin-bottom: 10px; }
+.opt { display: flex; align-items: center; gap: 10px; padding: 5px 0; cursor: pointer; font-size: 14px; }
+.opt input { width: 18px; height: 18px; accent-color: var(--mata); margin: 0; flex: none; }
+.opt .c { margin-left: auto; color: var(--cinza-2); font-size: 13px; }
+.opt.off { opacity: .4; }
+.sizes-f { display: flex; flex-wrap: wrap; gap: 6px; }
+.sz-f { min-width: 44px; height: 38px; padding: 0 10px; border: 1.5px solid var(--linha); background: var(--branco); border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 13px; }
+.sz-f[aria-pressed="true"] { border-color: var(--mata); background: var(--mata); color: var(--branco); }
+.sz-f:disabled { opacity: .35; cursor: default; }
+.f-clear { background: none; border: 0; color: var(--mata); font-weight: 600; text-decoration: underline; cursor: pointer; padding: 12px 0; justify-self: start; }
+
+.res-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+.res-bar h2 { font-size: 22px; }
+.res-bar .count { color: var(--cinza); font-size: 14px; margin-top: 4px; }
+.res-tools { display: flex; gap: 10px; align-items: center; }
+.sel { height: 42px; border: 1.5px solid var(--linha); border-radius: 6px; padding: 0 12px; font: 600 14px var(--font); background: var(--branco); color: var(--texto); }
+.f-open { display: none; height: 42px; border: 1.5px solid var(--texto); border-radius: 6px; padding: 0 16px; background: var(--branco); font-weight: 700; cursor: pointer; align-items: center; gap: 8px; }
+.f-open svg { width: 18px; height: 18px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+.chips:empty { display: none; }
+.chip { display: inline-flex; align-items: center; gap: 8px; background: var(--pedra); border: 0; border-radius: 999px; padding: 7px 12px 7px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.chip svg { width: 12px; height: 12px; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 28px 18px; }
+.card { min-width: 0; }
+.card a { text-decoration: none; display: grid; gap: 10px; }
+.card .ph { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--pedra); border-radius: 6px; }
+.card .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+.card a:hover .ph img { transform: scale(1.03); }
+.card .ph .alt { position: absolute; inset: 0; opacity: 0; transition: opacity .3s ease, transform .4s ease; }
+@media (hover: hover) { .card a:hover .ph .alt { opacity: 1; } }
+.nfotos { position: absolute; right: 10px; top: 10px; background: rgba(255,255,255,.92); color: var(--texto); font-size: 11px; font-weight: 600; padding: 3px 7px; border-radius: 4px; }
+.pdp-gal { display: grid; gap: 10px; align-content: start; justify-items: center; }
+.pdp-thumbs { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.pdp-thumbs:empty { display: none; }
+.pdp-thumbs button { width: 64px; aspect-ratio: 4 / 5; padding: 0; border: 2px solid transparent; border-radius: 4px; overflow: hidden; background: var(--pedra); cursor: pointer; }
+.pdp-thumbs button[aria-current="true"] { border-color: var(--mata); }
+.pdp-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+.pdp-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; border: 0; background: rgba(255,255,255,.92); box-shadow: 0 2px 10px rgba(0,0,0,.12); cursor: pointer; display: grid; place-items: center; }
+.pdp-nav svg { width: 20px; height: 20px; }
+.pdp-nav.prev { left: 12px; }
+.pdp-nav.next { right: 12px; }
+.pdp-nav.next svg { transform: scaleX(-1); }
+.off { position: absolute; left: 10px; top: 10px; background: var(--mata); color: var(--branco); font-weight: 700; font-size: 12px; padding: 4px 8px; border-radius: 4px; }
+.last { position: absolute; left: 10px; bottom: 10px; background: var(--branco); color: var(--texto); font-weight: 600; font-size: 12px; padding: 4px 8px; border-radius: 4px; }
+.card .info { display: grid; gap: 3px; }
+.card .brand { font-size: 12px; font-weight: 800; font-variation-settings: "wdth" 120; text-transform: uppercase; letter-spacing: .02em; color: var(--mata); }
+.card h3 { font-size: 14px; font-weight: 500; line-height: 1.35; color: var(--texto); }
+.card .pr { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.card s { font-size: 13px; color: var(--cinza-2); }
+.card .pr b { font-size: 19px; font-weight: 800; font-variation-settings: "wdth" 112; color: var(--preto); }
+.card .inst { font-size: 13px; color: var(--cinza); }
+.card .szs { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 6px; }
+.card .szs span { font-size: 11px; font-weight: 600; border: 1px solid var(--linha); border-radius: 4px; padding: 2px 6px; color: var(--cinza); }
+.empty { grid-column: 1 / -1; text-align: center; padding: 64px 16px; display: grid; gap: 12px; justify-items: center; }
+.empty p { color: var(--cinza); }
+.btn { display: inline-flex; justify-content: center; align-items: center; gap: 10px; height: 52px; padding: 0 24px; border-radius: 999px; border: 0; background: var(--mata); color: var(--branco); font-weight: 700; font-size: 15px; cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--mata-2); }
+.btn:disabled { background: var(--pedra-2); color: var(--cinza); cursor: not-allowed; }
+.btn.ghost { background: var(--branco); color: var(--mata); box-shadow: inset 0 0 0 1.5px var(--mata); }
+.btn.ghost:hover { background: var(--pedra); }
+.btn svg { width: 20px; height: 20px; }
+
+@media (max-width: 900px) {
+  .shop .wrap { grid-template-columns: minmax(0, 1fr); }
+  .f-open { display: inline-flex; }
+  .filters { position: fixed; inset: 0; z-index: 60; background: var(--branco); max-height: none; top: 0; padding: calc(16px + env(safe-area-inset-top, 0px)) max(20px, env(safe-area-inset-right, 0px)) calc(96px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); transform: translateX(-100%); transition: transform .25s ease; visibility: hidden; }
+  .filters.open { transform: none; visibility: visible; }
+  .f-head { display: flex; justify-content: space-between; align-items: center; padding-bottom: 8px; border-bottom: 1px solid var(--linha); }
+  .f-head h2 { font-size: 20px; }
+  .f-apply { position: fixed; left: 0; right: 0; bottom: 0; padding: 12px max(20px, env(safe-area-inset-right, 0px)) calc(12px + env(safe-area-inset-bottom, 0px)) max(20px, env(safe-area-inset-left, 0px)); background: var(--branco); border-top: 1px solid var(--linha); }
+  .f-apply .btn { width: 100%; }
+  .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; }
+  .card .pr b { font-size: 16px; }
+}
+@media (min-width: 901px) { .f-apply { display: none; } }
+
+/* How to buy + FAQ */
+.how { background: var(--pedra); padding-block: 56px; }
+.how .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; }
+.how h2 { font-size: 26px; margin-bottom: 20px; }
+.steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; }
+.steps li { display: grid; grid-template-columns: 48px 1fr; gap: 16px; align-items: start; }
+.steps li > b { width: 48px; height: 48px; border-radius: 50%; background: var(--mata); color: var(--branco); display: grid; place-items: center; font-size: 18px; font-weight: 800; font-variation-settings: "wdth" 125; }
+.steps h3 { font-size: 16px; margin-bottom: 2px; }
+.steps p { color: var(--cinza); font-size: 14px; }
+.faq details { border-bottom: 1px solid var(--pedra-2); padding-block: 14px; }
+.faq summary { cursor: pointer; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 16px; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font-size: 20px; line-height: 1; color: var(--mata); }
+.faq details[open] summary::after { content: "−"; }
+.faq p { color: var(--cinza); font-size: 14px; margin-top: 8px; max-width: 60ch; }
+@media (max-width: 900px) { .how .wrap { grid-template-columns: 1fr; } }
+
+/* Footer */
+footer { background: var(--mata); color: rgba(255,255,255,.82); font-size: 14px; }
+footer .wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 32px; padding-block: 48px 28px; }
+footer img { width: 220px; margin-bottom: 14px; }
+footer h3 { color: var(--branco); font-size: 14px; margin-bottom: 10px; }
+footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+footer button.link { background: none; border: 0; padding: 0; color: inherit; cursor: pointer; text-align: left; }
+footer button.link:hover { color: var(--branco); text-decoration: underline; }
+.legal { border-top: 1px solid rgba(255,255,255,.15); }
+.legal .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 18px; font-size: 12px; color: rgba(255,255,255,.6); grid-template-columns: none; }
+@media (max-width: 900px) { footer .wrap { grid-template-columns: 1fr 1fr; } footer .wrap > div:first-child { grid-column: 1 / -1; } }
+
+/* Overlays */
+.scrim { position: fixed; inset: 0; background: rgba(0,0,0,.45); z-index: 56; }
+.pdp { position: fixed; inset: 0; z-index: 55; overflow-y: auto; background: var(--branco); }
+.pdp-top { position: sticky; top: 0; z-index: 2; background: var(--branco); border-bottom: 1px solid var(--linha); padding-top: env(safe-area-inset-top, 0px); }
+.pdp-top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 10px; }
+.back { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; cursor: pointer; font-weight: 600; padding: 8px 4px; }
+.back svg { width: 20px; height: 20px; }
+.crumbs { font-size: 13px; color: var(--cinza); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.pdp-main .wrap { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 48px; padding-block: 28px 56px; }
+.pdp-ph { position: relative; aspect-ratio: 4 / 5; border-radius: 6px; overflow: hidden; background: var(--pedra); justify-self: center; width: min(100%, 620px, calc((100vh - 200px) * 0.8)); }
+.pdp-ph img { width: 100%; height: 100%; object-fit: contain; }
+.pdp-info { display: grid; gap: 18px; align-content: start; max-width: 520px; }
+.pdp-info .brand { font-size: 13px; font-weight: 800; font-variation-settings: "wdth" 125; text-transform: uppercase; letter-spacing: .02em; color: var(--mata); }
+.pdp-info h1 { font-size: clamp(24px, 2.6vw, 32px); font-weight: 600; line-height: 1.15; margin-top: 6px; }
+.pdp-price { display: grid; gap: 4px; padding-block: 4px 2px; }
+.pdp-price .from { color: var(--cinza-2); font-size: 15px; }
+.pdp-price .from s { margin-right: 8px; }
+.pdp-price .from em { font-style: normal; background: var(--menta); color: var(--mata); font-weight: 700; font-size: 13px; padding: 2px 8px; border-radius: 4px; }
+.pdp-price .now { font-size: 38px; font-weight: 800; font-variation-settings: "wdth" 115; color: var(--preto); line-height: 1.05; }
+.pdp-price .inst { color: var(--cinza); }
+.pdp-price .save { color: var(--mata); font-weight: 600; font-size: 14px; }
+.pdp-sz h2 { font-size: 14px; font-weight: 700; margin-bottom: 10px; display: flex; justify-content: space-between; }
+.pdp-sz h2 span { font-weight: 500; color: var(--cinza); }
+.sz-row { display: flex; flex-wrap: wrap; gap: 8px; }
+.sz { min-width: 56px; height: 48px; padding: 0 14px; border: 1.5px solid var(--linha); background: var(--branco); border-radius: 6px; cursor: pointer; font-weight: 700; font-size: 15px; }
+.sz:hover { border-color: var(--texto); }
+.sz[aria-pressed="true"] { border-color: var(--mata); background: var(--mata); color: var(--branco); }
+.sz-note { margin-top: 8px; font-size: 13px; color: var(--cinza); min-height: 20px; }
+.sz-note.warn { color: #9A3B12; }
+.pdp-btns { display: grid; gap: 10px; }
+.pdp-btns .btn { width: 100%; }
+.trust { list-style: none; margin: 0; padding: 18px 0 0; border-top: 1px solid var(--linha); display: grid; gap: 12px; }
+.trust li { display: flex; gap: 12px; align-items: flex-start; font-size: 14px; }
+.trust svg { width: 22px; height: 22px; flex: none; color: var(--mata); }
+.trust b { display: block; }
+.trust span { color: var(--cinza); }
+.related { border-top: 1px solid var(--linha); padding-block: 36px 64px; }
+.related h2 { font-size: 20px; margin-bottom: 16px; }
+.related .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 900px) {
+  .pdp-main .wrap { grid-template-columns: 1fr; gap: 20px; padding-block: 0 32px; }
+  .pdp-gal { margin-inline: calc(-1 * max(16px, env(safe-area-inset-left, 0px))); }
+  .pdp-ph { width: 100%; border-radius: 0; }
+  .related .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.drawer { position: fixed; top: 0; right: 0; bottom: 0; width: min(440px, 100%); z-index: 57; background: var(--branco); display: flex; flex-direction: column; box-shadow: -8px 0 32px rgba(0,0,0,.12); padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); padding-right: env(safe-area-inset-right, 0px); }
+.dr-h { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; border-bottom: 1px solid var(--linha); }
+.dr-h h2 { font-size: 18px; }
+.x { background: none; border: 0; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: grid; place-items: center; }
+.x:hover { background: var(--pedra); }
+.x svg { width: 20px; height: 20px; }
+.dr-body { flex: 1; overflow-y: auto; padding: 8px 20px; }
+.line { display: grid; grid-template-columns: 76px minmax(0, 1fr) auto; gap: 14px; padding-block: 14px; border-bottom: 1px solid var(--linha); align-items: start; }
+.line img { width: 76px; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; background: var(--pedra); }
+.line .b { font-size: 11px; font-weight: 800; font-variation-settings: "wdth" 120; text-transform: uppercase; color: var(--mata); }
+.line .n { font-size: 14px; line-height: 1.3; }
+.line .m { font-size: 13px; color: var(--cinza); margin-top: 4px; }
+.line .p { font-weight: 800; font-variation-settings: "wdth" 112; text-align: right; white-space: nowrap; }
+.line .rm { background: none; border: 0; color: var(--cinza); text-decoration: underline; cursor: pointer; font-size: 13px; padding: 6px 0 0; display: block; margin-left: auto; }
+.qty { display: inline-flex; align-items: center; border: 1px solid var(--linha); border-radius: 6px; margin-top: 8px; }
+.qty button { width: 32px; height: 30px; background: none; border: 0; cursor: pointer; font-size: 16px; }
+.qty button:disabled { opacity: .3; cursor: default; }
+.qty span { min-width: 24px; text-align: center; font-weight: 600; font-size: 14px; }
+.dr-empty { text-align: center; padding: 56px 12px; display: grid; gap: 14px; justify-items: center; color: var(--cinza); }
+.dr-empty svg { width: 48px; height: 48px; color: var(--pedra-2); }
+.dr-f { border-top: 1px solid var(--linha); padding: 18px 20px 20px; display: grid; gap: 10px; }
+.tot { display: flex; justify-content: space-between; font-size: 14px; color: var(--cinza); }
+.tot.big { font-size: 18px; color: var(--texto); font-weight: 800; font-variation-settings: "wdth" 112; }
+.tot.save { color: var(--mata); font-weight: 600; }
+.dr-f small { color: var(--cinza); font-size: 12px; text-align: center; }
+
+.toast { position: fixed; left: 50%; bottom: calc(24px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); z-index: 70; background: var(--texto); color: var(--branco); padding: 12px 20px; border-radius: 999px; font-size: 14px; font-weight: 600; box-shadow: 0 6px 24px rgba(0,0,0,.2); }
+body.lock { overflow: hidden; }
+@media (prefers-reduced-motion: reduce) { *, *::before { transition: none !important; } }
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.3.6 1.4 2 3 2.6.2.1.4 0 .5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.1 1.2-.9 1.7-.6.4-1.6.6-3.1 0a9.4 9.4 0 0 1-4.6-4.5c-.6-1.2-.4-2.6-.2-3.4Z" fill="currentColor"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-filter" viewBox="0 0 24 24"><path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M7 15h4" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-truck" viewBox="0 0 24 24"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="7" cy="17.5" r="1.8" fill="var(--branco)" stroke="currentColor" stroke-width="1.6"/><circle cx="17" cy="17.5" r="1.8" fill="var(--branco)" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-6.5-6-6.5-11a6.5 6.5 0 0 1 13 0c0 5-6.5 11-6.5 11Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M12 3 4.5 6v5.5c0 4.6 3.2 8.2 7.5 9.5 4.3-1.3 7.5-4.9 7.5-9.5V6L12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div class="ann gutter"><div class="wrap"><span>Grifes originais com <b id="ann-off">30%</b> de desconto</span><span>Parcele em até 10x no cartão</span><span>Envio para todo o Brasil</span></div></div>
+
+<header class="hdr">
+  <div class="gutter"><div class="wrap hdr-row">
+    <button class="logo" type="button" id="go-home" style="background:none;border:0;padding:0;cursor:pointer" aria-label="Cabide Raro, página inicial"><img src="img/logo/cabide-raro-logo-horizontal-verde.svg" alt="Cabide Raro"></button>
+    <label class="search"><span class="sr">Buscar</span><input id="q" type="search" placeholder="Busque por peça, marca ou categoria" autocomplete="off"><svg aria-hidden="true"><use href="#i-search"/></svg></label>
+    <div class="acts">
+      <a class="act" id="wa-top" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span class="lbl">Atendimento</span></a>
+      <button class="act bag-btn" type="button" id="open-bag" aria-label="Abrir sacola"><svg aria-hidden="true"><use href="#i-bag"/></svg><span class="bag-count num" id="bag-count" data-n="0">0</span><span class="lbl">Sacola</span></button>
+    </div>
+  </div></div>
+  <nav class="nav gutter" aria-label="Departamentos"><div class="wrap" id="nav">
+    <button type="button" data-nav="tudo" aria-pressed="true">Todas as peças</button>
+    <button type="button" data-nav="Feminino" aria-pressed="false">Feminino</button>
+    <button type="button" data-nav="Masculino" aria-pressed="false">Masculino</button>
+    <button type="button" data-nav="praia" aria-pressed="false">Moda praia</button>
+    <button type="button" data-nav="calcados" aria-pressed="false">Calçados</button>
+    <button type="button" data-nav="Vestidos" aria-pressed="false">Vestidos</button>
+    <button type="button" data-nav="ate300" aria-pressed="false">Até R$ 300</button>
+  </div></nav>
+</header>
+
+<main id="home">
+  <section class="banners" aria-label="Destaques">
+    <div class="wrap">
+      <div class="bn bn-main">
+        <img src="img/hazel-editorial.jpg" alt="Modelo vestindo o conjunto Hazel off white da Vix Paula Hermanny">
+        <button class="bn-hit" type="button" data-nav="tudo" aria-label="Ver todas as peças"></button>
+        <div class="top">
+          <span class="pill"><span class="dot" aria-hidden="true"></span><span id="hero-prazo">Só até 31 de dezembro</span></span>
+          <a class="ptag" id="hero-tag" href="#p-vix-01">
+            <span class="b" id="hero-tag-b">Vix Paula Hermanny</span>
+            <span class="n" id="hero-tag-n">Calça Hazel Off White</span>
+            <span class="row num"><s id="hero-tag-from">R$ 1.598,00</s><strong id="hero-tag-now">R$ 1.119,90</strong></span>
+            <span class="go">Ver peça</span>
+          </a>
+        </div>
+        <div class="content">
+          <span class="kicker">FARM, Animale, Vix Paula Hermanny, Reserva e Dress To</span>
+          <h1 class="wide"><span class="big" id="hero-off">30% OFF</span><span class="sub">em grifes originais</span></h1>
+          <div class="ctas">
+            <button class="btn-w" type="button" data-nav="tudo" id="hero-cta">Ver as 46 peças</button>
+            <button class="btn-o" type="button" data-scroll="como-comprar">Como comprar</button>
+          </div>
+          <div class="seals">
+            <span><svg aria-hidden="true"><use href="#i-check"/></svg>100% originais</span>
+            <span><svg aria-hidden="true"><use href="#i-card"/></svg>Pix ou até 10x</span>
+            <span><svg aria-hidden="true"><use href="#i-truck"/></svg>Envio com rastreio</span>
+          </div>
+        </div>
+      </div>
+      <div class="bn bn-side">
+        <img src="img/lilou-verde.jpg" alt="Saída Lilou da Vix Paula Hermanny">
+        <button class="bn-hit" type="button" data-nav="praia" aria-label="Ver moda praia"></button>
+        <div class="lab"><span class="off2" id="bn-praia-off">30% OFF</span><b>Moda praia</b><span id="bn-praia">Saídas e tops Vix</span><em id="bn-praia-min"></em></div>
+      </div>
+      <div class="bn bn-side">
+        <img src="img/produtos/res-07.jpg" alt="Tênis Reserva R-Osaka" class="fit" style="--fit-bg:#c7beb3">
+        <button class="bn-hit" type="button" data-nav="calcados" aria-label="Ver calçados"></button>
+        <div class="lab"><span class="off2" id="bn-calc-off">30% OFF</span><b>Calçados</b><span id="bn-calc">Tênis e mocassins Reserva</span><em id="bn-calc-min"></em></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benef gutter" aria-label="Vantagens">
+    <div class="wrap">
+      <div><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>100% originais</b><span>Peças das próprias marcas</span></p></div>
+      <div><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Até 10x no cartão</b><span>ou Pix</span></p></div>
+      <div><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Envio para todo o Brasil</b><span>com código de rastreio</span></p></div>
+      <div><svg aria-hidden="true"><use href="#i-pin"/></svg><p><b>Retire na loja</b><span id="cidade">Teixeira de Freitas, BA</span></p></div>
+    </div>
+  </section>
+
+  <section class="brands gutter" aria-labelledby="h-brands">
+    <div class="wrap">
+      <div class="sec-h"><h2 class="wide" id="h-brands">Compre por marca</h2><p>Só marcas brasileiras de alto padrão</p></div>
+      <div class="brand-row" id="brand-row"></div>
+    </div>
+  </section>
+
+  <section class="shop gutter" id="loja" aria-labelledby="res-title">
+    <div class="wrap">
+      <aside class="filters" id="filters" aria-label="Filtros">
+        <div class="f-head"><h2 class="wide">Filtrar</h2><button class="x" type="button" id="f-close" aria-label="Fechar filtros"><svg><use href="#i-x"/></svg></button></div>
+        <div id="f-groups"></div>
+        <button class="f-clear" type="button" id="f-clear">Limpar filtros</button>
+        <div class="f-apply"><button class="btn" type="button" id="f-apply">Ver peças</button></div>
+      </aside>
+      <div>
+        <div class="res-bar">
+          <div><h2 class="wide" id="res-title">Todas as peças</h2><p class="count num" id="res-count"></p></div>
+          <div class="res-tools">
+            <button class="f-open" type="button" id="f-open"><svg aria-hidden="true"><use href="#i-filter"/></svg>Filtrar</button>
+            <label><span class="sr">Ordenar</span>
+              <select class="sel" id="sort">
+                <option value="rel">Destaques</option>
+                <option value="menor">Menor preço</option>
+                <option value="maior">Maior preço</option>
+                <option value="economia">Maior economia</option>
+                <option value="az">Nome, A a Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="chips" id="chips"></div>
+        <div class="grid" id="grid"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="how gutter" id="como-comprar" aria-label="Como comprar e dúvidas">
+    <div class="wrap">
+      <div>
+        <h2 class="wide">Como comprar</h2>
+        <ol class="steps">
+          <li><b>1</b><div><h3>Escolha as peças</h3><p>Selecione o tamanho e coloque na sacola. Cada peça tem poucas unidades.</p></div></li>
+          <li><b>2</b><div><h3>Finalize pelo WhatsApp</h3><p>A sacola vira uma mensagem pronta com as peças, os tamanhos e o total.</p></div></li>
+          <li><b>3</b><div><h3>Pague e receba</h3><p>Pix ou cartão em até 10x. Retire em Teixeira de Freitas ou receba em casa com rastreio.</p></div></li>
+        </ol>
+      </div>
+      <div class="faq">
+        <h2 class="wide">Dúvidas</h2>
+        <details><summary>As peças são originais?</summary><p>Sim. Vendemos somente peças das próprias marcas. Você pode pedir a foto da etiqueta de qualquer peça antes de comprar.</p></details>
+        <details><summary>Por que o preço é menor que na loja da marca?</summary><p>Compramos lotes de peças de coleção e repassamos com desconto. Por isso há poucas unidades e poucos tamanhos de cada.</p></details>
+        <details><summary>Como funciona a entrega?</summary><p>Enviamos para todo o Brasil com código de rastreio. O frete é calculado pelo CEP no WhatsApp. Em Teixeira de Freitas, você também pode retirar.</p></details>
+        <details><summary>Posso trocar?</summary><p>Combine a troca pelo WhatsApp em até 7 dias após receber, com a peça sem uso e com etiqueta.</p></details>
+        <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito em até 10x.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="gutter">
+  <div class="wrap">
+    <div><img src="img/logo/cabide-raro-logo-horizontal-branco.svg" alt="Cabide Raro"><p>Grifes brasileiras originais com preço de outlet.<br><span id="cidade-2">Teixeira de Freitas, BA</span></p></div>
+    <div><h3>Departamentos</h3><ul><li><button class="link" type="button" data-nav="Feminino">Feminino</button></li><li><button class="link" type="button" data-nav="Masculino">Masculino</button></li><li><button class="link" type="button" data-nav="praia">Moda praia</button></li><li><button class="link" type="button" data-nav="calcados">Calçados</button></li></ul></div>
+    <div><h3>Marcas</h3><ul id="f-brands"></ul></div>
+    <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou até 10x no cartão</li></ul></div>
+  </div>
+  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span></div></div>
+</footer>
+
+<div class="scrim" id="scrim" hidden></div>
+
+<div class="pdp" id="pdp" role="dialog" aria-modal="true" aria-labelledby="pdp-name" hidden>
+  <div class="pdp-top gutter"><div class="wrap">
+    <button class="back" type="button" id="pdp-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Voltar</button>
+    <span class="crumbs" id="pdp-crumbs"></span>
+    <button class="act bag-btn" type="button" data-open-bag aria-label="Abrir sacola"><svg aria-hidden="true"><use href="#i-bag"/></svg><span class="bag-count num" data-n="0">0</span></button>
+  </div></div>
+  <div class="pdp-main gutter"><div class="wrap">
+    <div class="pdp-gal">
+      <div class="pdp-ph"><img id="pdp-img" alt=""><span class="off" id="pdp-off"></span>
+        <button class="pdp-nav prev" type="button" id="pdp-prev" aria-label="Foto anterior"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+        <button class="pdp-nav next" type="button" id="pdp-next" aria-label="Próxima foto"><svg aria-hidden="true"><use href="#i-back"/></svg></button>
+      </div>
+      <div class="pdp-thumbs" id="pdp-thumbs"></div>
+    </div>
+    <div class="pdp-info">
+      <div><span class="brand" id="pdp-brand"></span><h1 id="pdp-name"></h1></div>
+      <div class="pdp-price">
+        <span class="from num"><s id="pdp-from"></s><em id="pdp-pct"></em></span>
+        <span class="now num" id="pdp-now"></span>
+        <span class="inst num" id="pdp-inst"></span>
+        <span class="save num" id="pdp-save"></span>
+      </div>
+      <div class="pdp-sz">
+        <h2>Tamanho <span id="pdp-sz-label"></span></h2>
+        <div class="sz-row" id="pdp-sizes"></div>
+        <p class="sz-note" id="pdp-note"></p>
+      </div>
+      <div class="pdp-btns">
+        <button class="btn" type="button" id="pdp-add"><svg aria-hidden="true"><use href="#i-bag"/></svg>Adicionar à sacola</button>
+        <a class="btn ghost" id="pdp-wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Comprar pelo WhatsApp</a>
+      </div>
+      <ul class="trust">
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>Peça original</b><span>Peça a foto da etiqueta antes de comprar.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Pix ou até 10x no cartão</b><span>Pagamento combinado pelo WhatsApp.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Envio com rastreio ou retirada</b><span id="pdp-city">Frete calculado pelo CEP.</span></p></li>
+      </ul>
+    </div>
+  </div></div>
+  <section class="related gutter"><div class="wrap"><h2 class="wide">Você também pode gostar</h2><div class="grid" id="pdp-rel"></div></div></section>
+</div>
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" hidden>
+  <div class="dr-h"><h2 class="wide" id="dr-title">Sacola</h2><button class="x" type="button" id="dr-close" aria-label="Fechar sacola"><svg><use href="#i-x"/></svg></button></div>
+  <div class="dr-body" id="dr-body"></div>
+  <div class="dr-f" id="dr-foot"></div>
+</aside>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="produtos.js"></script>
+<script>
+(function () {
+  var CFG = window.CR_CONFIG || {};
+  var RAW = window.CR_PRODUTOS || [];
+  var PARC = CFG.parcelas || 10;
+  var BRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
+  var SIZE_ORDER = ['PP', 'P', 'M', 'G', 'GG'];
+  var BRAND_ORDER = ['FARM', 'Animale', 'Vix Paula Hermanny', 'Reserva', 'Dress To'];
+  var CALC = ['Tênis', 'Sapatos e mocassins', 'Sandálias'];
+  var PRICES = [
+    { k: 'a', label: 'Até R$ 300', min: 0, max: 300 },
+    { k: 'b', label: 'R$ 300 a R$ 600', min: 300, max: 600 },
+    { k: 'c', label: 'R$ 600 a R$ 1.000', min: 600, max: 1000 },
+    { k: 'd', label: 'Acima de R$ 1.000', min: 1000, max: Infinity }
+  ];
+
+  function $(id) { return document.getElementById(id); }
+  function esc(s) { return String(s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+  function norm(s) { return String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, ''); }
+  function money(v) { return BRL.format(v); }
+  function sizeKey(s) { var i = SIZE_ORDER.indexOf(s); return i >= 0 ? i : 100 + Number(s); }
+
+  var P = RAW.map(function (p, i) {
+    var preco = typeof p.preco === 'number' ? p.preco : Math.max(Math.round(p.original * (1 - (CFG.desconto || 0)) / 10) * 10 - 0.10, 9.9);
+    var sizes = p.tamanhos.map(function (t) { return { s: String(t[0]), q: Number(t[1]) || 0 }; }).filter(function (t) { return t.q > 0; }).sort(function (a, b) { return sizeKey(a.s) - sizeKey(b.s); });
+    var stock = sizes.reduce(function (a, t) { return a + t.q; }, 0);
+    var nf = (window.CR_FOTOS || {})[p.id] || 1, imgs = [];
+    for (var k = 1; k <= nf; k++) imgs.push('img/produtos/' + p.id + (k === 1 ? '' : '-' + k) + '.jpg');
+    if (p.img) imgs[0] = p.img;
+    return Object.assign({}, p, { idx: i, preco: preco, sizes: sizes, stock: stock, pct: Math.round((1 - preco / p.original) * 100), img: imgs[0], imgs: imgs, search: norm(p.nome + ' ' + p.marca + ' ' + p.categoria + ' ' + p.departamento + (p.praia ? ' moda praia' : '')) });
+  }).filter(function (p) { return p.stock > 0; });
+  var BY_ID = {}; P.forEach(function (p) { BY_ID[p.id] = p; });
+
+  // ---------- WhatsApp ----------
+  function waLink(text) { var n = String(CFG.whatsapp || '').replace(/\D/g, ''); return 'https://wa.me/' + n + '?text=' + encodeURIComponent(text); }
+  $('wa-top').href = waLink('Olá, Cabide Raro! Quero tirar uma dúvida.');
+  $('wa-foot').href = $('wa-top').href;
+  ['cidade', 'cidade-2'].forEach(function (id) { if (CFG.cidade) $(id).textContent = CFG.cidade; });
+  $('ann-off').textContent = Math.round((CFG.desconto || 0) * 100) + '%';
+
+  // ---------- Filters state ----------
+  var F = { q: '', dept: new Set(), cat: new Set(), brand: new Set(), size: new Set(), price: new Set(), praia: false };
+  var sortBy = 'rel';
+  var DIMS = {
+    dept: function (p) { return [p.departamento]; },
+    cat: function (p) { return [p.categoria]; },
+    brand: function (p) { return [p.marca]; },
+    size: function (p) { return p.sizes.map(function (t) { return t.s; }); },
+    price: function (p) { return PRICES.filter(function (r) { return p.preco >= r.min && p.preco < r.max; }).map(function (r) { return r.k; }); }
+  };
+  function matches(p, skip) {
+    if (F.q) { var words = norm(F.q).split(/\s+/).filter(Boolean); for (var i = 0; i < words.length; i++) if (p.search.indexOf(words[i]) < 0) return false; }
+    if (F.praia && !p.praia) return false;
+    for (var d in DIMS) {
+      if (d === skip || !F[d].size) continue;
+      var vals = DIMS[d](p), ok = false;
+      for (var j = 0; j < vals.length; j++) if (F[d].has(vals[j])) { ok = true; break; }
+      if (!ok) return false;
+    }
+    return true;
+  }
+  function results() {
+    var r = P.filter(function (p) { return matches(p); });
+    var s = {
+      rel: function (a, b) { return a.idx - b.idx; },
+      menor: function (a, b) { return a.preco - b.preco; },
+      maior: function (a, b) { return b.preco - a.preco; },
+      economia: function (a, b) { return (b.original - b.preco) - (a.original - a.preco); },
+      az: function (a, b) { return a.nome.localeCompare(b.nome, 'pt-BR'); }
+    }[sortBy];
+    return r.sort(s);
+  }
+
+  // ---------- Rendering ----------
+  function card(p) {
+    return '<article class="card"><a href="#p-' + p.id + '">' +
+      '<div class="ph"><img src="' + esc(p.img) + '" alt="' + esc(p.nome) + '" loading="lazy" width="800" height="1000">' +
+      (p.imgs[1] ? '<img class="alt" src="' + esc(p.imgs[1]) + '" alt="" loading="lazy" width="800" height="1000">' : '') +
+      (p.imgs.length > 1 ? '<span class="nfotos">' + p.imgs.length + ' fotos</span>' : '') +
+      (p.pct > 0 ? '<span class="off">-' + p.pct + '%</span>' : '') +
+      (p.stock === 1 ? '<span class="last">Última peça</span>' : '') + '</div>' +
+      '<div class="info"><span class="brand">' + esc(p.marca) + '</span><h3>' + esc(p.nome) + '</h3>' +
+      '<div class="pr num">' + (p.pct > 0 ? '<s>' + money(p.original) + '</s>' : '') + '<b>' + money(p.preco) + '</b></div>' +
+      '<span class="inst num">ou ' + PARC + 'x de ' + money(p.preco / PARC) + '</span>' +
+      '<div class="szs">' + p.sizes.map(function (t) { return '<span>' + esc(t.s) + '</span>'; }).join('') + '</div></div></a></article>';
+  }
+
+  function optionsFor(dim) {
+    var counts = {};
+    P.forEach(function (p) { if (!matches(p, dim)) return; DIMS[dim](p).forEach(function (v) { counts[v] = (counts[v] || 0) + 1; }); });
+    return counts;
+  }
+  function allValues(dim) {
+    var set = {}; P.forEach(function (p) { DIMS[dim](p).forEach(function (v) { set[v] = true; }); });
+    var vals = Object.keys(set);
+    if (dim === 'size') vals.sort(function (a, b) { return sizeKey(a) - sizeKey(b); });
+    else if (dim === 'brand') vals.sort(function (a, b) { return BRAND_ORDER.indexOf(a) - BRAND_ORDER.indexOf(b); });
+    else if (dim === 'price') vals = PRICES.map(function (r) { return r.k; }).filter(function (k) { return set[k]; });
+    else vals.sort(function (a, b) { return a.localeCompare(b, 'pt-BR'); });
+    return vals;
+  }
+  function label(dim, v) { if (dim === 'price') return PRICES.filter(function (r) { return r.k === v; })[0].label; return v; }
+
+  function renderFilters() {
+    var groups = [['dept', 'Departamento'], ['cat', 'Categoria'], ['brand', 'Marca'], ['size', 'Tamanho'], ['price', 'Preço']];
+    var html = '';
+    groups.forEach(function (g) {
+      var dim = g[0], counts = optionsFor(dim), vals = allValues(dim);
+      html += '<div class="fg"><h3>' + g[1] + '</h3>';
+      if (dim === 'size') {
+        html += '<div class="sizes-f">' + vals.map(function (v) {
+          var on = F.size.has(v), n = counts[v] || 0;
+          return '<button type="button" class="sz-f" data-dim="size" data-v="' + esc(v) + '" aria-pressed="' + on + '"' + (!n && !on ? ' disabled' : '') + '>' + esc(v) + '</button>';
+        }).join('') + '</div>';
+      } else {
+        html += vals.map(function (v, i) {
+          var on = F[dim].has(v), n = counts[v] || 0, id = 'f-' + dim + '-' + i;
+          return '<label class="opt' + (!n && !on ? ' off' : '') + '" for="' + id + '"><input type="checkbox" id="' + id + '" data-dim="' + dim + '" data-v="' + esc(v) + '"' + (on ? ' checked' : '') + '>' + esc(label(dim, v)) + '<span class="c num">' + n + '</span></label>';
+        }).join('');
+      }
+      html += '</div>';
+    });
+    $('f-groups').innerHTML = html;
+  }
+
+  function renderChips() {
+    var html = '';
+    if (F.q) html += chip('q', F.q, 'Busca: ' + F.q);
+    if (F.praia) html += chip('praia', '1', 'Moda praia');
+    ['dept', 'cat', 'brand', 'size', 'price'].forEach(function (d) { F[d].forEach(function (v) { html += chip(d, v, (d === 'size' ? 'Tam. ' : '') + label(d, v)); }); });
+    $('chips').innerHTML = html;
+  }
+  function chip(dim, v, text) { return '<button class="chip" type="button" data-chip="' + dim + '" data-v="' + esc(v) + '">' + esc(text) + '<svg aria-hidden="true"><use href="#i-x"/></svg></button>'; }
+
+  function title() {
+    if (F.q) return 'Resultados para "' + F.q + '"';
+    if (F.praia) return 'Moda praia';
+    if (F.brand.size === 1 && !F.cat.size) return Array.from(F.brand)[0];
+    if (F.cat.size === CALC.length && CALC.every(function (c) { return F.cat.has(c); })) return 'Calçados';
+    if (F.cat.size === 1) return Array.from(F.cat)[0];
+    if (F.dept.size === 1) return Array.from(F.dept)[0];
+    return 'Todas as peças';
+  }
+
+  function render() {
+    var r = results();
+    $('res-title').textContent = title();
+    var units = r.reduce(function (a, p) { return a + p.stock; }, 0);
+    $('res-count').textContent = r.length + (r.length === 1 ? ' peça' : ' peças') + ', ' + units + (units === 1 ? ' unidade' : ' unidades');
+    $('grid').innerHTML = r.length ? r.map(card).join('') :
+      '<div class="empty"><h3 class="wide">Nenhuma peça com esses filtros</h3><p>Tire um filtro ou busque por outra palavra.</p><button class="btn" type="button" id="empty-clear">Limpar filtros</button></div>';
+    $('f-apply').textContent = 'Ver ' + r.length + (r.length === 1 ? ' peça' : ' peças');
+    renderFilters(); renderChips(); renderBrands(); syncNav();
+  }
+
+  function renderBrands() {
+    var counts = {}; P.forEach(function (p) { counts[p.marca] = (counts[p.marca] || 0) + 1; });
+    var brands = BRAND_ORDER.filter(function (b) { return counts[b]; });
+    $('brand-row').innerHTML = brands.map(function (b) {
+      var on = F.brand.size === 1 && F.brand.has(b);
+      return '<button class="brand-tile" type="button" data-brand="' + esc(b) + '" aria-pressed="' + on + '"><b>' + esc(b) + '</b><span class="num">' + counts[b] + (counts[b] === 1 ? ' peça' : ' peças') + '</span></button>';
+    }).join('');
+    $('f-brands').innerHTML = brands.map(function (b) { return '<li><button class="link" type="button" data-brand="' + esc(b) + '">' + esc(b) + '</button></li>'; }).join('');
+  }
+
+  // ---------- Navigation shortcuts ----------
+  var navKey = 'tudo';
+  function clearFilters(keepQ) { F.dept.clear(); F.cat.clear(); F.brand.clear(); F.size.clear(); F.price.clear(); F.praia = false; if (!keepQ) { F.q = ''; $('q').value = ''; } }
+  function applyNav(k) {
+    clearFilters(); navKey = k;
+    if (k === 'Feminino' || k === 'Masculino') F.dept.add(k);
+    else if (k === 'praia') F.praia = true;
+    else if (k === 'calcados') CALC.forEach(function (c) { F.cat.add(c); });
+    else if (k === 'Vestidos') F.cat.add('Vestidos');
+    else if (k === 'ate300') F.price.add('a');
+    render(); toShop();
+  }
+  function syncNav() {
+    var empty = !F.q && !F.praia && !F.dept.size && !F.cat.size && !F.brand.size && !F.size.size && !F.price.size;
+    var k = empty ? 'tudo' : navKey;
+    document.querySelectorAll('#nav button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.nav === k && (empty || navMatches(k)))); });
+  }
+  function navMatches(k) {
+    if (F.q || F.brand.size || F.size.size) return false;
+    if (k === 'Feminino' || k === 'Masculino') return F.dept.size === 1 && F.dept.has(k) && !F.cat.size && !F.price.size && !F.praia;
+    if (k === 'praia') return F.praia && !F.dept.size && !F.cat.size && !F.price.size;
+    if (k === 'calcados') return F.cat.size === CALC.length && !F.dept.size && !F.price.size && !F.praia;
+    if (k === 'Vestidos') return F.cat.size === 1 && F.cat.has('Vestidos') && !F.dept.size && !F.price.size;
+    if (k === 'ate300') return F.price.size === 1 && F.price.has('a') && !F.dept.size && !F.cat.size && !F.praia;
+    return false;
+  }
+  function toShop() { var el = $('loja'); var y = el.getBoundingClientRect().top + window.scrollY - 120; window.scrollTo({ top: Math.max(y, 0), behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }
+
+  // ---------- Events ----------
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-nav]');
+    if (t) { closePdp(); applyNav(t.dataset.nav); return; }
+    t = e.target.closest('[data-brand]');
+    if (t) { closePdp(); clearFilters(); navKey = ''; F.brand.add(t.dataset.brand); render(); toShop(); return; }
+    t = e.target.closest('.sz-f');
+    if (t) { toggle('size', t.dataset.v); return; }
+    t = e.target.closest('[data-chip]');
+    if (t) { var d = t.dataset.chip; if (d === 'q') { F.q = ''; $('q').value = ''; } else if (d === 'praia') F.praia = false; else F[d].delete(t.dataset.v); render(); return; }
+    t = e.target.closest('[data-scroll]');
+    if (t) { var el = $(t.dataset.scroll); if (el) el.scrollIntoView({ behavior: 'smooth' }); return; }
+    t = e.target.closest('[data-open-bag]');
+    if (t) { openBag(); return; }
+    if (e.target.id === 'empty-clear') { clearFilters(); render(); }
+  });
+  $('f-groups').addEventListener('change', function (e) { var i = e.target; if (i.dataset && i.dataset.dim) toggle(i.dataset.dim, i.dataset.v, i.checked); });
+  function toggle(dim, v, on) { if (on === undefined) on = !F[dim].has(v); if (on) F[dim].add(v); else F[dim].delete(v); navKey = ''; render(); }
+  var qTimer;
+  $('q').addEventListener('input', function (e) { clearTimeout(qTimer); qTimer = setTimeout(function () { F.q = e.target.value.trim(); navKey = ''; render(); }, 160); });
+  $('q').addEventListener('keydown', function (e) { if (e.key === 'Enter') { F.q = e.target.value.trim(); render(); toShop(); } });
+  $('sort').addEventListener('change', function (e) { sortBy = e.target.value; render(); });
+  $('f-clear').addEventListener('click', function () { clearFilters(); render(); });
+  $('go-home').addEventListener('click', function () { closePdp(); clearFilters(); render(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  $('f-open').addEventListener('click', function () { $('filters').classList.add('open'); document.body.classList.add('lock'); });
+  function closeFilters() { $('filters').classList.remove('open'); if ($('pdp').hidden && $('drawer').hidden) document.body.classList.remove('lock'); }
+  $('f-close').addEventListener('click', closeFilters);
+  $('f-apply').addEventListener('click', function () { closeFilters(); toShop(); });
+
+  // ---------- Product page ----------
+  var cur = null, curSize = null, lastFocus = null;
+  function openPdp(id) {
+    var p = BY_ID[id]; if (!p) return;
+    if ($('pdp').hidden) lastFocus = document.activeElement;
+    cur = p; curSize = p.sizes.length === 1 ? p.sizes[0].s : null;
+    showPhoto(0);
+    $('pdp-off').textContent = p.pct > 0 ? '-' + p.pct + '%' : ''; $('pdp-off').hidden = !(p.pct > 0);
+    $('pdp-brand').textContent = p.marca; $('pdp-name').textContent = p.nome;
+    $('pdp-crumbs').textContent = p.departamento + ' / ' + p.categoria;
+    $('pdp-from').textContent = money(p.original); $('pdp-pct').textContent = p.pct + '% off';
+    $('pdp-now').textContent = money(p.preco);
+    $('pdp-inst').textContent = 'ou ' + PARC + 'x de ' + money(p.preco / PARC) + ' no cartão';
+    $('pdp-save').textContent = 'Você economiza ' + money(p.original - p.preco) + ' em relação à loja da marca';
+    $('pdp-city').textContent = 'Frete pelo CEP ou retirada em ' + (CFG.cidade || 'nossa loja') + '.';
+    var rel = P.filter(function (o) { return o.id !== p.id && (o.categoria === p.categoria || o.marca === p.marca); });
+    rel.sort(function (a, b) { return (b.categoria === p.categoria) - (a.categoria === p.categoria) || a.idx - b.idx; });
+    $('pdp-rel').innerHTML = rel.slice(0, 4).map(card).join('');
+    renderPdpSizes();
+    $('pdp').hidden = false; $('pdp').scrollTop = 0; document.body.classList.add('lock');
+    $('pdp-back').focus({ preventScroll: true });
+  }
+  var photoIdx = 0;
+  function showPhoto(i) {
+    var p = cur, n = p.imgs.length;
+    photoIdx = (i + n) % n;
+    $('pdp-img').src = p.imgs[photoIdx];
+    $('pdp-img').alt = p.nome + (n > 1 ? ', foto ' + (photoIdx + 1) + ' de ' + n : '');
+    $('pdp-prev').hidden = $('pdp-next').hidden = n < 2;
+    $('pdp-thumbs').innerHTML = n < 2 ? '' : p.imgs.map(function (src, k) {
+      return '<button type="button" data-ph="' + k + '" aria-label="Ver foto ' + (k + 1) + '" aria-current="' + (k === photoIdx) + '"><img src="' + esc(src) + '" alt=""></button>';
+    }).join('');
+  }
+  $('pdp-thumbs').addEventListener('click', function (e) { var b = e.target.closest('[data-ph]'); if (b) showPhoto(+b.dataset.ph); });
+  $('pdp-prev').addEventListener('click', function () { showPhoto(photoIdx - 1); });
+  $('pdp-next').addEventListener('click', function () { showPhoto(photoIdx + 1); });
+  (function () {
+    var x0 = null, ph = document.querySelector('.pdp-ph');
+    ph.addEventListener('touchstart', function (e) { x0 = e.touches[0].clientX; }, { passive: true });
+    ph.addEventListener('touchend', function (e) { if (x0 === null || !cur || cur.imgs.length < 2) return; var dx = e.changedTouches[0].clientX - x0; if (Math.abs(dx) > 40) showPhoto(photoIdx + (dx < 0 ? 1 : -1)); x0 = null; }, { passive: true });
+  })();
+  function renderPdpSizes() {
+    var p = cur;
+    $('pdp-sizes').innerHTML = p.sizes.map(function (t) { return '<button type="button" class="sz" data-sz="' + esc(t.s) + '" aria-pressed="' + (t.s === curSize) + '">' + esc(t.s) + '</button>'; }).join('');
+    var t = p.sizes.filter(function (x) { return x.s === curSize; })[0];
+    var inBag = t ? bagQty(p.id, t.s) : 0;
+    $('pdp-sz-label').textContent = curSize ? 'Selecionado: ' + curSize : '';
+    var note = $('pdp-note'); note.className = 'sz-note';
+    if (!t) note.textContent = 'Escolha um tamanho.';
+    else if (inBag >= t.q) { note.textContent = 'Você já colocou todas as unidades deste tamanho na sacola.'; note.className = 'sz-note warn'; }
+    else note.textContent = t.q === 1 ? 'Última unidade neste tamanho.' : t.q + ' unidades neste tamanho.';
+    $('pdp-add').disabled = !t || inBag >= t.q;
+    $('pdp-wa').href = waLink('Olá, Cabide Raro! Quero comprar:\n' + p.nome + ' (' + p.marca + ')' + (curSize ? ', tamanho ' + curSize : '') + ', ' + money(p.preco) + '\n\nAinda está disponível?');
+  }
+  $('pdp-sizes').addEventListener('click', function (e) { var b = e.target.closest('.sz'); if (!b) return; curSize = b.dataset.sz; renderPdpSizes(); });
+  $('pdp-add').addEventListener('click', function () { if (!cur || !curSize) return; addToBag(cur.id, curSize); renderPdpSizes(); openBag(); toast('Adicionado à sacola'); });
+  $('pdp-back').addEventListener('click', function () { closePdp(true); });
+  function closePdp(fromUser) {
+    if ($('pdp').hidden) return;
+    $('pdp').hidden = true; cur = null;
+    if ($('drawer').hidden) document.body.classList.remove('lock');
+    if (/^#p-/.test(location.hash)) { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { location.hash = ''; } }
+    if (fromUser && lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
+  }
+  function route() { var m = /^#p-([\w-]+)$/.exec(location.hash); if (m && BY_ID[m[1]]) openPdp(m[1]); else closePdp(); }
+  window.addEventListener('hashchange', route);
+
+  // ---------- Bag ----------
+  var BAG = [];
+  try { BAG = JSON.parse(localStorage.getItem('cr_sacola') || '[]').filter(function (l) { return BY_ID[l.id]; }); } catch (e) { BAG = []; }
+  function saveBag() { try { localStorage.setItem('cr_sacola', JSON.stringify(BAG)); } catch (e) {} }
+  function stockOf(id, s) { var t = BY_ID[id].sizes.filter(function (x) { return x.s === s; })[0]; return t ? t.q : 0; }
+  function bagQty(id, s) { var l = BAG.filter(function (x) { return x.id === id && x.s === s; })[0]; return l ? l.q : 0; }
+  function addToBag(id, s) {
+    var l = BAG.filter(function (x) { return x.id === id && x.s === s; })[0];
+    if (l) l.q = Math.min(l.q + 1, stockOf(id, s)); else BAG.push({ id: id, s: s, q: 1 });
+    saveBag(); renderBag();
+  }
+  function renderBag() {
+    var n = BAG.reduce(function (a, l) { return a + l.q; }, 0);
+    document.querySelectorAll('.bag-count').forEach(function (el) { el.textContent = n; el.dataset.n = n; });
+    if (!BAG.length) {
+      $('dr-body').innerHTML = '<div class="dr-empty"><svg aria-hidden="true"><use href="#i-bag"/></svg><p>Sua sacola está vazia.</p><button class="btn" type="button" data-nav="tudo">Ver peças</button></div>';
+      $('dr-foot').innerHTML = ''; return;
+    }
+    $('dr-body').innerHTML = BAG.map(function (l, i) {
+      var p = BY_ID[l.id], max = stockOf(l.id, l.s);
+      return '<div class="line"><img src="' + esc(p.img) + '" alt=""><div><div class="b">' + esc(p.marca) + '</div><div class="n">' + esc(p.nome) + '</div><div class="m">Tamanho ' + esc(l.s) + '</div>' +
+        '<div class="qty"><button type="button" data-q="-1" data-i="' + i + '" aria-label="Diminuir"' + (l.q <= 1 ? ' disabled' : '') + '>−</button><span class="num">' + l.q + '</span><button type="button" data-q="1" data-i="' + i + '" aria-label="Aumentar"' + (l.q >= max ? ' disabled' : '') + '>+</button></div></div>' +
+        '<div><div class="p num">' + money(p.preco * l.q) + '</div><button class="rm" type="button" data-rm="' + i + '">Remover</button></div></div>';
+    }).join('');
+    var tot = 0, orig = 0, msg = 'Olá, Cabide Raro! Quero comprar estas peças:\n\n';
+    BAG.forEach(function (l) { var p = BY_ID[l.id]; tot += p.preco * l.q; orig += p.original * l.q; msg += '- ' + p.nome + ' (' + p.marca + '), tam. ' + l.s + (l.q > 1 ? ', ' + l.q + ' unidades' : '') + ': ' + money(p.preco * l.q) + '\n'; });
+    msg += '\nTotal: ' + money(tot) + '\nComo fica o frete e o pagamento?';
+    $('dr-foot').innerHTML =
+      '<div class="tot num"><span>Preço nas lojas das marcas</span><span><s>' + money(orig) + '</s></span></div>' +
+      '<div class="tot save num"><span>Sua economia</span><span>' + money(orig - tot) + '</span></div>' +
+      '<div class="tot big num"><span>Total</span><span>' + money(tot) + '</span></div>' +
+      '<div class="tot num"><span></span><span>ou ' + PARC + 'x de ' + money(tot / PARC) + '</span></div>' +
+      '<a class="btn" href="' + waLink(msg) + '" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Finalizar pelo WhatsApp</a>' +
+      '<small>A mensagem já vai com as peças, os tamanhos e o total. O frete é combinado no WhatsApp.</small>';
+  }
+  $('dr-body').addEventListener('click', function (e) {
+    var b = e.target.closest('[data-q]');
+    if (b) { var l = BAG[+b.dataset.i]; l.q = Math.max(1, Math.min(l.q + Number(b.dataset.q), stockOf(l.id, l.s))); saveBag(); renderBag(); if (cur) renderPdpSizes(); return; }
+    b = e.target.closest('[data-rm]');
+    if (b) { BAG.splice(+b.dataset.rm, 1); saveBag(); renderBag(); if (cur) renderPdpSizes(); }
+  });
+  var bagFocus = null;
+  function openBag() { bagFocus = document.activeElement; $('drawer').hidden = false; $('scrim').hidden = false; document.body.classList.add('lock'); $('dr-close').focus({ preventScroll: true }); }
+  function closeBag() { $('drawer').hidden = true; $('scrim').hidden = true; if ($('pdp').hidden) document.body.classList.remove('lock'); if (bagFocus && bagFocus.focus) bagFocus.focus({ preventScroll: true }); }
+  $('open-bag').addEventListener('click', openBag);
+  $('dr-close').addEventListener('click', closeBag);
+  $('scrim').addEventListener('click', closeBag);
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'Escape') return;
+    if (!$('drawer').hidden) closeBag();
+    else if ($('filters').classList.contains('open')) closeFilters();
+    else if (!$('pdp').hidden) closePdp(true);
+  });
+  $('drawer').addEventListener('click', function (e) { if (e.target.closest('[data-nav]')) closeBag(); });
+
+  var tt;
+  function toast(m) { var el = $('toast'); el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(function () { el.hidden = true; }, 1800); }
+
+  // ---------- Banner counts ----------
+  var off = Math.round((CFG.desconto || 0) * 100) + '% OFF';
+  ['hero-off', 'bn-praia-off', 'bn-calc-off'].forEach(function (id) { $(id).textContent = off; });
+  $('hero-cta').textContent = 'Ver as ' + P.length + ' peças';
+  var praia = P.filter(function (p) { return p.praia; }), calc = P.filter(function (p) { return CALC.indexOf(p.categoria) >= 0; });
+  function minPrice(list) { return Math.min.apply(null, list.map(function (p) { return p.preco; })); }
+  $('bn-praia').textContent = praia.length + ' peças Vix Paula Hermanny';
+  $('bn-calc').textContent = calc.length + ' pares Reserva';
+  $('bn-praia-min').textContent = praia.length ? 'a partir de ' + money(minPrice(praia)) : '';
+  $('bn-calc-min').textContent = calc.length ? 'a partir de ' + money(minPrice(calc)) : '';
+  // peça em destaque na etiqueta da capa
+  var hero = BY_ID[CFG.destaque || 'vix-01'] || P[0];
+  $('hero-tag').href = '#p-' + hero.id;
+  $('hero-tag-b').textContent = hero.marca; $('hero-tag-n').textContent = hero.nome;
+  $('hero-tag-from').textContent = money(hero.original); $('hero-tag-now').textContent = money(hero.preco);
+  // prazo real da liquidação
+  (function () {
+    var fim = new Date(CFG.fimDaPromo || '2026-12-31T23:59:59');
+    var dias = Math.ceil((fim - new Date()) / 86400000);
+    var d = fim.getDate(), mes = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'][fim.getMonth()];
+    var dd = ('0' + d).slice(-2) + '/' + ('0' + (fim.getMonth() + 1)).slice(-2);
+    $('hero-prazo').textContent = dias > 1 ? 'Só até ' + dd + ', faltam ' + dias + ' dias' : (dias === 1 ? 'Último dia da liquidação' : 'Últimas peças');
+    $('hero-prazo').title = 'Liquidação até ' + d + ' de ' + mes;
+  })();
+
+  render(); renderBag(); route();
+})();
+</script>
+
+</body>
+</html>
