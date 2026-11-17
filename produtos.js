@@ -19,7 +19,7 @@ window.CR_CONFIG = {
 
   // Endereço do servidor de pagamento (Cloudflare Worker). Vazio: a sacola
   // finaliza pelo WhatsApp, como antes.
-  api: '',
+  api: 'https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev',
 
   // Último dia da liquidação (aparece na capa com a contagem de dias).
   fimDaPromo: '2026-12-31T23:59:59',
