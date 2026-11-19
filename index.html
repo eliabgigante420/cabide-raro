@@ -294,6 +294,9 @@ footer button.link { background: none; border: 0; padding: 0; color: inherit; cu
 footer button.link:hover { color: var(--branco); text-decoration: underline; }
 .legal { border-top: 1px solid rgba(255,255,255,.15); }
 .legal .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 18px; font-size: 12px; color: rgba(255,255,255,.6); grid-template-columns: none; }
+.adm-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; color: #fff; font-weight: 600; text-decoration: none; }
+.adm-btn:hover { background: rgba(255,255,255,.1); }
+.adm-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
 @media (max-width: 900px) { footer .wrap { grid-template-columns: 1fr 1fr; } footer .wrap > div:first-child { grid-column: 1 / -1; } }
 
 /* Overlays */
@@ -571,7 +574,7 @@ body.lock { overflow: hidden; }
     <div><h3>Marcas</h3><ul id="f-brands"></ul></div>
     <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou 3x sem juros</li><li>Frete grátis</li></ul></div>
   </div>
-  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026 · CNPJ 46.882.719/0001-02</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais. · <a href="https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev/pedidos" target="_blank" rel="noopener nofollow" style="color:inherit">Área da loja</a></span></div></div>
+  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026 · CNPJ 46.882.719/0001-02</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span><a class="adm-btn" href="https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev/pedidos" target="_blank" rel="noopener nofollow"><svg aria-hidden="true"><use href="#i-lock"/></svg>Área da loja</a></div></div>
 </footer>
 
 <div class="scrim" id="scrim" hidden></div>
