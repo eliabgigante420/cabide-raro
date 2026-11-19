@@ -561,7 +561,7 @@ body.lock { overflow: hidden; }
         <details><summary>Posso trocar ou devolver?</summary><p>Sim. Você tem 7 dias depois de receber para desistir da compra, por qualquer motivo, e devolvemos todo o valor pago, frete incluso. Para trocar de tamanho, enquanto houver a peça, combine pelo WhatsApp no mesmo prazo. A peça deve voltar sem uso e com etiqueta.</p></details>
         <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito em até 3x sem juros, ou até 10x com juros. O pagamento é feito no Mercado Pago: seus dados de cartão não passam pela nossa loja.</p></details>
         <details><summary>Quero comprar várias peças ou revender</summary><p>Para compras maiores e atacado temos condições especiais. <a class="wa-link" href="#" target="_blank" rel="noopener">Fale com a gente no WhatsApp</a>.</p></details>
-        <details><summary>O que vocês fazem com os meus dados?</summary><p>Usamos seu nome, e-mail, celular e endereço só para processar, entregar e dar suporte ao seu pedido. Os dados do cartão e do Pix ficam com o Mercado Pago e não passam pela nossa loja. Não vendemos nem compartilhamos seus dados com mais ninguém, e você pode pedir para apagá-los a qualquer momento pelo WhatsApp.</p></details>
+        <details><summary>O que vocês fazem com os meus dados?</summary><p>Usamos seu nome, e-mail, celular e endereço só para processar, entregar e dar suporte ao seu pedido. Os dados do cartão e do Pix ficam com o Mercado Pago e não passam pela nossa loja. Não vendemos nem compartilhamos seus dados com mais ninguém, e você pode pedir para apagá-los a qualquer momento pelo WhatsApp. Também contamos visitas e peças vistas de forma anônima, sem nome, e-mail ou IP, só para saber o que agrada mais.</p></details>
       </div>
     </div>
   </section>
@@ -864,6 +864,7 @@ body.lock { overflow: hidden; }
   var cur = null, curSize = null, lastFocus = null;
   function openPdp(id) {
     var p = BY_ID[id]; if (!p) return;
+    track('ver', id);
     if ($('pdp').hidden) lastFocus = document.activeElement;
     cur = p; curSize = p.sizes.length === 1 ? p.sizes[0].s : null;
     showPhoto(0);
@@ -934,6 +935,7 @@ body.lock { overflow: hidden; }
   function stockOf(id, s) { var t = BY_ID[id].sizes.filter(function (x) { return x.s === s; })[0]; return t ? t.q : 0; }
   function bagQty(id, s) { var l = BAG.filter(function (x) { return x.id === id && x.s === s; })[0]; return l ? l.q : 0; }
   function addToBag(id, s) {
+    track('sacola', id);
     var l = BAG.filter(function (x) { return x.id === id && x.s === s; })[0];
     if (l) l.q = Math.min(l.q + 1, stockOf(id, s)); else BAG.push({ id: id, s: s, q: 1 });
     saveBag(); renderBag();
@@ -1010,7 +1012,7 @@ body.lock { overflow: hidden; }
       '<button class="btn" type="submit" form="co" id="co-go"><svg aria-hidden="true"><use href="#i-lock"/></svg>Ir para o pagamento</button>' +
       '<small>Você paga no Mercado Pago com Pix ou cartão (' + SJ + 'x sem juros ou até ' + PARC + 'x). Os dados do cartão não passam pela nossa loja.</small>';
   }
-  function openCheckout() { coStep = 'dados'; renderBag(); $('dr-body').scrollTop = 0; var f = $('co'); if (f) { var first = ['nome', 'email', 'telefone'].map(function (k) { return f.elements[k]; }).filter(function (i) { return !i.value; })[0]; if (first) first.focus({ preventScroll: true }); } }
+  function openCheckout() { track('checkout'); coStep = 'dados'; renderBag(); $('dr-body').scrollTop = 0; var f = $('co'); if (f) { var first = ['nome', 'email', 'telefone'].map(function (k) { return f.elements[k]; }).filter(function (i) { return !i.value; })[0]; if (first) first.focus({ preventScroll: true }); } }
   function coError(html) { var el = $('co-err'); if (!el) return; el.innerHTML = html; el.hidden = !html; }
   function markField(f, name, msg) { var i = f.elements[name]; i.setAttribute('aria-invalid', 'true'); var em = document.createElement('em'); em.className = 'fe'; em.textContent = msg; i.insertAdjacentElement('afterend', em); }
   function clearMark(i) { if (!i.getAttribute('aria-invalid')) return; i.removeAttribute('aria-invalid'); var em = i.nextElementSibling; if (em && em.className === 'fe') em.remove(); }
@@ -1193,6 +1195,38 @@ body.lock { overflow: hidden; }
     $('pdp-wa-t').textContent = on ? 'Tirar dúvida no WhatsApp' : 'Comprar pelo WhatsApp';
     if (cur) renderPdpSizes();
   }
+  // ---------- Estatísticas anônimas (painel da loja) ----------
+  // Conta visitas, peças vistas, sacola e checkout. Sem nome, e-mail ou IP: só um número aleatório por aparelho.
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
+  function sess(k, v) { try { if (v === undefined) return sessionStorage.getItem(k); sessionStorage.setItem(k, v); } catch (e) { return null; } }
+  (function () {
+    var q = location.search;
+    if (/[?&]naocontar=1/.test(q)) store('cr_naocontar', '1');
+    if (/[?&]naocontar=0/.test(q)) store('cr_naocontar', '');
+  })();
+  function origem() {
+    var m = /[?&](?:origem|utm_source)=([\w.-]{1,40})/i.exec(location.search);
+    if (m) return m[1].toLowerCase();
+    var r = ''; try { r = new URL(document.referrer).hostname.replace(/^www\./, ''); } catch (e) {}
+    if (!r || r === location.hostname) return 'direto';
+    if (/instagram/.test(r)) return 'instagram';
+    if (/facebook|fb\.|messenger/.test(r)) return 'facebook';
+    if (/whatsapp|wa\.me/.test(r)) return 'whatsapp';
+    if (/google/.test(r)) return 'google';
+    if (/tiktok/.test(r)) return 'tiktok';
+    return r.slice(0, 40);
+  }
+  function track(t, id) {
+    if (!API || LOCAL || store('cr_naocontar') === '1') return;
+    if (t === 'ver' || t === 'sacola') { var k = 'cr_' + t + '_' + id; if (sess(k)) return; sess(k, '1'); }
+    var vid = store('cr_vid');
+    if (!vid) { vid = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); store('cr_vid', vid); }
+    var body = JSON.stringify({ t: t, id: id || '', vid: vid, origem: t === 'visita' ? origem() : '' });
+    try { if (navigator.sendBeacon && navigator.sendBeacon(API + '/evento', body)) return; } catch (e) {}
+    try { fetch(API + '/evento', { method: 'POST', body: body, keepalive: true, mode: 'cors' }); } catch (e) {}
+  }
+  if (!sess('cr_visita')) { sess('cr_visita', '1'); track('visita'); }
+
   if (!API) setPay(false);
   render(); renderBag(); route(); checkReturn();
   if (API) {
