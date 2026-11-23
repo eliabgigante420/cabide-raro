@@ -677,7 +677,7 @@ body.lock { overflow: hidden; }
       </ul>
     </div>
   </div></div>
-  <section class="revs gutter" aria-label="Avaliações"><div class="wrap" id="pdp-revs"></div></section>
+  <section class="revs gutter" aria-label="Avaliações" hidden><div class="wrap" id="pdp-revs"></div></section>
   <section class="related gutter"><div class="wrap"><h2 class="wide">Você também pode gostar</h2><div class="grid" id="pdp-rel"></div></div></section>
 </div>
 
@@ -1305,11 +1305,12 @@ body.lock { overflow: hidden; }
       h += '<div class="rv-grid">' + revSummary(L, 'Média da loja, ' + L.total + (L.total === 1 ? ' avaliação' : ' avaliações')) +
         '<div class="rv-list"><p class="rv-note" style="margin:0">Esta peça ainda não foi avaliada. Veja o que dizem clientes que compraram outras peças na Cabide Raro:</p>' +
         REVS.itens.slice(0, 4).map(function (a) { return revItem(a, true); }).join('') + '</div></div>';
-    } else {
-      h += '<div class="rv-empty"><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Ainda não há avaliações</b><p>Aqui só aparecem avaliações de quem comprou na Cabide Raro: cada uma é ligada a um pedido pago. Enquanto isso, fale com a gente no WhatsApp e peça a foto da etiqueta ou mais fotos da peça.</p></div></div>';
     }
-    if (r || L) h += '<p class="rv-note">Somente clientes com pedido pago na Cabide Raro podem avaliar.</p>';
-    $('pdp-revs').innerHTML = h;
+    var box = $('pdp-revs');
+    box.parentNode.hidden = !(r || L); // sem nenhuma avaliação: a seção não aparece
+    if (!(r || L)) { box.innerHTML = ''; return; }
+    h += '<p class="rv-note">Somente clientes com pedido pago na Cabide Raro podem avaliar.</p>';
+    box.innerHTML = h;
   }
   function loadRevs() {
     if (!API) return;
