@@ -96,7 +96,7 @@ window.CR_PRODUTOS = [
    Para adicionar uma foto, salve como id-3.jpg e aumente o número aqui. */
 window.CR_FOTOS = {
   'farm-03': 2, 'farm-09': 2, 'farm-10': 2,
-  'res-05': 2, 'res-07': 2, 'res-08': 2, 'res-09': 2, 'res-10': 2, 'res-11': 2, 'res-16': 2,
+  'res-04': 4, 'res-05': 2, 'res-07': 2, 'res-08': 2, 'res-09': 2, 'res-10': 2, 'res-11': 2, 'res-16': 2,
   'vix-01': 2, 'vix-02': 2, 'vix-03': 2, 'vix-04': 2, 'vix-05': 2, 'vix-06': 2, 'vix-07': 2,
   'vix-08': 2, 'vix-09': 2, 'vix-10': 2, 'vix-11': 2, 'vix-12': 2, 'vix-13': 2
 };
