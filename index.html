@@ -335,6 +335,63 @@ footer button.link:hover { color: var(--branco); text-decoration: underline; }
 .trust svg { width: 22px; height: 22px; flex: none; color: var(--mata); }
 .trust b { display: block; }
 .trust span { color: var(--cinza); }
+/* Avaliações verificadas */
+.stars { position: relative; display: inline-flex; color: #D9D6D0; line-height: 0; vertical-align: middle; }
+.stars .on { position: absolute; inset: 0 auto 0 0; overflow: hidden; color: var(--mata); display: inline-flex; white-space: nowrap; }
+.stars svg { width: var(--st, 16px); height: var(--st, 16px); flex: none; }
+.card .rate { display: flex; align-items: center; gap: 4px; font-size: 12px; color: var(--cinza); margin-top: 4px; }
+.revs { border-top: 1px solid var(--linha); padding-block: 36px 40px; }
+.revs h2 { font-size: 20px; margin-bottom: 18px; }
+.rv-grid { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 48px; align-items: start; }
+.rv-sum .big { display: flex; align-items: center; gap: 12px; }
+.rv-sum .big b { font-size: 44px; font-weight: 800; line-height: 1; }
+.rv-sum small { display: block; color: var(--cinza); font-size: 13px; margin-top: 4px; }
+.rv-rec { margin-top: 18px; font-size: 13px; color: var(--cinza); }
+.rv-rec b { font-size: 26px; font-weight: 800; color: var(--texto); }
+.bar { height: 8px; border-radius: 99px; background: var(--pedra); overflow: hidden; margin-top: 6px; }
+.bar i { display: block; height: 100%; background: var(--mata); }
+.rv-size { margin-top: 20px; }
+.rv-size .lab { font-size: 13px; font-weight: 600; }
+.rv-size .seg { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; margin-top: 8px; }
+.rv-size .seg i { height: 6px; border-radius: 99px; background: var(--pedra); }
+.rv-size .seg i.on { background: var(--mata); }
+.rv-size .lbl { display: flex; justify-content: space-between; font-size: 12px; color: var(--cinza); margin-top: 6px; }
+.rv-list { display: grid; gap: 16px; }
+.rv-item { border-bottom: 1px solid var(--linha); padding-bottom: 16px; }
+.rv-item .prod { font-size: 12px; color: var(--cinza); margin-left: 6px; }
+.rv-item p { margin: 8px 0 0; font-size: 15px; line-height: 1.5; white-space: pre-line; }
+.rv-item .who { font-size: 13px; color: var(--cinza); margin-top: 8px; }
+.rv-item .who b { color: var(--texto); }
+.ver { display: inline-flex; align-items: center; gap: 3px; color: var(--mata); font-weight: 600; }
+.ver svg { width: 14px; height: 14px; }
+.rv-empty { background: var(--pedra); border-radius: 12px; padding: 20px; display: flex; gap: 14px; align-items: flex-start; max-width: 760px; }
+.rv-empty svg { width: 26px; height: 26px; color: var(--mata); flex: none; }
+.rv-empty p { margin: 4px 0 0; color: var(--cinza); font-size: 14px; line-height: 1.5; }
+.rv-note { font-size: 12px; color: var(--cinza); margin: 18px 0 0; }
+@media (max-width: 760px) { .rv-grid { grid-template-columns: 1fr; gap: 24px; } }
+.rvw { position: fixed; inset: 0; z-index: 56; overflow-y: auto; background: var(--branco); }
+.rvw-body { max-width: 640px; margin: 0 auto; padding-block: 28px 64px; }
+.rvw-body h1 { font-size: clamp(22px, 3vw, 28px); margin: 0 0 8px; }
+.rvw-body > p { color: var(--cinza); margin: 0 0 20px; line-height: 1.5; }
+.rv-form { border: 1px solid var(--linha); border-radius: 12px; padding: 18px; margin-bottom: 16px; display: grid; gap: 16px; }
+.rv-form h2 { font-size: 16px; margin: 0; }
+.rv-form h2 small { display: block; font-weight: 400; color: var(--cinza); font-size: 13px; margin-top: 2px; }
+.rv-form fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.rv-form legend, .rv-form .lab { font-size: 13px; font-weight: 600; margin-bottom: 8px; display: block; padding: 0; }
+.pick-stars { display: inline-flex; gap: 2px; }
+.pick-stars button { background: none; border: 0; padding: 2px; cursor: pointer; color: #D9D6D0; line-height: 0; }
+.pick-stars button.on { color: var(--mata); }
+.pick-stars svg { width: 34px; height: 34px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips label { position: relative; }
+.chips input { position: absolute; opacity: 0; pointer-events: none; }
+.chips span { display: inline-block; padding: 8px 14px; border: 1px solid var(--linha); border-radius: 99px; font-size: 14px; cursor: pointer; }
+.chips input:checked + span { background: var(--mata); border-color: var(--mata); color: var(--branco); }
+.chips input:focus-visible + span { outline: 2px solid var(--mata); outline-offset: 2px; }
+.rv-form textarea, .rv-form input[type=text] { width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; padding: 10px 12px; border: 1px solid var(--linha); border-radius: 8px; background: var(--branco); color: var(--texto); }
+.rv-form textarea { min-height: 96px; resize: vertical; }
+.rv-form .err { color: #a3261a; font-size: 13px; margin: 0; }
+.rv-done { background: var(--menta); color: var(--mata); border-radius: 8px; padding: 10px 14px; font-weight: 600; margin: 0; font-size: 14px; }
 .related { border-top: 1px solid var(--linha); padding-block: 36px 64px; }
 .related h2 { font-size: 20px; margin-bottom: 16px; }
 .related .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -422,6 +479,7 @@ body.lock { overflow: hidden; }
   <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.3.6 1.4 2 3 2.6.2.1.4 0 .5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.1 1.2-.9 1.7-.6.4-1.6.6-3.1 0a9.4 9.4 0 0 1-4.6-4.5c-.6-1.2-.4-2.6-.2-3.4Z" fill="currentColor"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></symbol>
   <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
@@ -611,13 +669,21 @@ body.lock { overflow: hidden; }
         <a class="btn ghost" id="pdp-wa" href="#" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg><span id="pdp-wa-t">Tirar dúvida no WhatsApp</span></a>
       </div>
       <ul class="trust">
-        <li><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>Peça original</b><span>Peça a foto da etiqueta antes de comprar.</span></p></li>
-        <li><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Pix ou 3x sem juros</b><span id="pdp-pay">Pagamento seguro pelo Mercado Pago, até 10x no cartão.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-check"/></svg><p><b>Peça 100% original</b><span>Peça a foto da etiqueta no WhatsApp antes de comprar.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-lock"/></svg><p><b>Pagamento protegido</b><span id="pdp-pay">Pix ou cartão no ambiente seguro do Mercado Pago. 3x sem juros ou até 10x.</span></p></li>
         <li><svg aria-hidden="true"><use href="#i-truck"/></svg><p><b>Frete grátis</b><span id="pdp-city">Para todo o Brasil, com rastreio.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-clock"/></svg><p><b>7 dias para devolver</b><span>Desistiu? Devolvemos todo o valor, frete incluso.</span></p></li>
+        <li><svg aria-hidden="true"><use href="#i-card"/></svg><p><b>Loja com CNPJ</b><span>Cabide Raro · CNPJ 46.882.719/0001-02</span></p></li>
       </ul>
     </div>
   </div></div>
+  <section class="revs gutter" aria-label="Avaliações"><div class="wrap" id="pdp-revs"></div></section>
   <section class="related gutter"><div class="wrap"><h2 class="wide">Você também pode gostar</h2><div class="grid" id="pdp-rel"></div></div></section>
+</div>
+
+<div class="rvw" id="rvw" role="dialog" aria-modal="true" aria-labelledby="rvw-t" hidden>
+  <div class="pdp-top gutter"><div class="wrap"><button class="back" type="button" id="rvw-back"><svg aria-hidden="true"><use href="#i-back"/></svg>Ir para a loja</button></div></div>
+  <div class="gutter"><div class="wrap"><div class="rvw-body" id="rvw-body"></div></div></div>
 </div>
 
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="dr-title" hidden>
@@ -722,6 +788,7 @@ body.lock { overflow: hidden; }
       '<div class="info"><span class="brand">' + esc(p.marca) + '</span><h3>' + esc(p.nome) + '</h3>' +
       '<div class="pr num">' + (p.pct > 0 ? '<s>' + money(p.original) + '</s>' : '') + '<b>' + money(p.preco) + '</b></div>' +
       '<span class="inst num">' + instText(p.preco) + '</span>' +
+      rateLine(p.id) +
       '<div class="szs">' + p.sizes.map(function (t) { return '<span>' + esc(t.s) + '</span>'; }).join('') + '</div></div></a></article>';
   }
 
@@ -875,7 +942,8 @@ body.lock { overflow: hidden; }
     $('pdp-now').textContent = money(p.preco);
     $('pdp-inst').textContent = instText(p.preco) + ' no cartão';
     $('pdp-save').textContent = 'Você economiza ' + money(p.original - p.preco) + ' em relação à loja da marca';
-    $('pdp-city').textContent = 'Para todo o Brasil, com rastreio, ou retirada em ' + (CFG.cidade || 'nossa loja') + '.';
+    $('pdp-city').textContent = 'Postado em até 3 dias úteis, com rastreio para todo o Brasil, ou retirada em ' + (CFG.cidade || 'nossa loja') + '.';
+    renderRevs(p);
     var rel = P.filter(function (o) { return o.id !== p.id && (o.categoria === p.categoria || o.marca === p.marca); });
     rel.sort(function (a, b) { return (b.categoria === p.categoria) - (a.categoria === p.categoria) || a.idx - b.idx; });
     $('pdp-rel').innerHTML = rel.slice(0, 4).map(card).join('');
@@ -925,7 +993,12 @@ body.lock { overflow: hidden; }
     if (/^#p-/.test(location.hash)) { try { history.replaceState(null, '', location.pathname + location.search); } catch (e) { location.hash = ''; } }
     if (fromUser && lastFocus && lastFocus.focus) lastFocus.focus({ preventScroll: true });
   }
-  function route() { var m = /^#p-([\w-]+)$/.exec(location.hash); if (m && BY_ID[m[1]]) openPdp(m[1]); else closePdp(); }
+  function route() {
+    var a = /^#avaliar\/(CR-[A-Z0-9]{8})\/([a-f0-9]{16})$/.exec(location.hash);
+    if (a) { closePdp(); openAvaliar(a[1], a[2]); return; }
+    closeAvaliar();
+    var m = /^#p-([\w-]+)$/.exec(location.hash); if (m && BY_ID[m[1]]) openPdp(m[1]); else closePdp();
+  }
   window.addEventListener('hashchange', route);
 
   // ---------- Bag ----------
@@ -1195,6 +1268,125 @@ body.lock { overflow: hidden; }
     $('pdp-wa-t').textContent = on ? 'Tirar dúvida no WhatsApp' : 'Comprar pelo WhatsApp';
     if (cur) renderPdpSizes();
   }
+  // ---------- Avaliações verificadas ----------
+  // Só quem tem pedido pago avalia (o link leva o número do pedido e um código do servidor).
+  var REVS = { loja: null, produtos: {}, itens: [] };
+  var NOMES = {}; (window.CR_PRODUTOS || []).forEach(function (p) { NOMES[p.id] = p.nome; });
+  var TAM = { pequeno: 'Ficou pequeno', certo: 'Na medida', grande: 'Ficou grande' };
+  function stars(n, size) {
+    var s = '<svg aria-hidden="true"><use href="#i-star"/></svg>', five = s + s + s + s + s;
+    return '<span class="stars" style="--st:' + (size || 16) + 'px" role="img" aria-label="' + nota(n) + ' de 5 estrelas">' + five + '<span class="on" style="width:' + (n / 5 * 100) + '%">' + five + '</span></span>';
+  }
+  function nota(n) { return Number(n).toFixed(1).replace('.', ','); }
+  function fmtData(d) { var p = String(d).split('-'); return p[2] + '/' + p[1] + '/' + p[0]; }
+  function rateLine(id) {
+    var r = REVS && REVS.produtos && REVS.produtos[id];
+    return r ? '<span class="rate">' + stars(r.media, 12) + ' <span class="num">' + nota(r.media) + ' (' + r.total + ')</span></span>' : '';
+  }
+  function revItem(a, showProd) {
+    return '<div class="rv-item">' + stars(a.nota, 15) + (showProd && NOMES[a.id] ? '<span class="prod">' + esc(NOMES[a.id]) + '</span>' : '') +
+      (a.texto ? '<p>' + esc(a.texto) + '</p>' : '') +
+      '<div class="who"><b>' + esc(a.nome) + '</b> · ' + fmtData(a.data) + ' · <span class="ver"><svg aria-hidden="true"><use href="#i-ok"/></svg>Compra verificada</span>' + (TAM[a.tamanho] ? ' · ' + TAM[a.tamanho] : '') + '</div></div>';
+  }
+  function revSummary(r, label) {
+    var ks = ['pequeno', 'certo', 'grande'];
+    var modo = ks.reduce(function (m, k) { return (r.tamanho[k] || 0) > (r.tamanho[m] || 0) ? k : m; }, 'certo');
+    return '<div class="rv-sum"><div class="big"><b class="num">' + nota(r.media) + '</b><div>' + stars(r.media, 20) + '<small>' + label + '</small></div></div>' +
+      '<div class="rv-rec"><b class="num">' + r.recomenda + '%</b> recomendam<div class="bar"><i style="width:' + r.recomenda + '%"></i></div></div>' +
+      '<div class="rv-size"><span class="lab">Tamanho</span><div class="seg">' + ks.map(function (k) { return '<i class="' + (k === modo ? 'on' : '') + '"></i>'; }).join('') +
+      '</div><div class="lbl"><span>Pequeno</span><span>Na medida</span><span>Grande</span></div></div></div>';
+  }
+  function renderRevs(p) {
+    var r = REVS.produtos[p.id], L = REVS.loja, h = '<h2 class="wide">Avaliações</h2>';
+    if (r) {
+      h += '<div class="rv-grid">' + revSummary(r, r.total === 1 ? '1 avaliação desta peça' : r.total + ' avaliações desta peça') +
+        '<div class="rv-list">' + REVS.itens.filter(function (a) { return a.id === p.id; }).map(function (a) { return revItem(a); }).join('') + '</div></div>';
+    } else if (L) {
+      h += '<div class="rv-grid">' + revSummary(L, 'Média da loja, ' + L.total + (L.total === 1 ? ' avaliação' : ' avaliações')) +
+        '<div class="rv-list"><p class="rv-note" style="margin:0">Esta peça ainda não foi avaliada. Veja o que dizem clientes que compraram outras peças na Cabide Raro:</p>' +
+        REVS.itens.slice(0, 4).map(function (a) { return revItem(a, true); }).join('') + '</div></div>';
+    } else {
+      h += '<div class="rv-empty"><svg aria-hidden="true"><use href="#i-check"/></svg><div><b>Ainda não há avaliações</b><p>Aqui só aparecem avaliações de quem comprou na Cabide Raro: cada uma é ligada a um pedido pago. Enquanto isso, fale com a gente no WhatsApp e peça a foto da etiqueta ou mais fotos da peça.</p></div></div>';
+    }
+    if (r || L) h += '<p class="rv-note">Somente clientes com pedido pago na Cabide Raro podem avaliar.</p>';
+    $('pdp-revs').innerHTML = h;
+  }
+  function loadRevs() {
+    if (!API) return;
+    fetch(API + '/avaliacoes').then(function (r) { return r.ok ? r.json() : Promise.reject(); }).then(function (d) {
+      REVS = { loja: d.loja || null, produtos: d.produtos || {}, itens: d.itens || [] };
+      render(); if (cur) renderRevs(cur);
+    }).catch(function () {});
+  }
+
+  // formulário de avaliação (link enviado ao cliente depois da entrega)
+  var AV = null;
+  function chip(name, val, label, on) { return '<label><input type="radio" name="' + name + '" value="' + val + '"' + (on ? ' checked' : '') + '><span>' + label + '</span></label>'; }
+  function closeAvaliar() {
+    if ($('rvw').hidden) return;
+    $('rvw').hidden = true;
+    if ($('pdp').hidden && $('drawer').hidden) document.body.classList.remove('lock');
+  }
+  function avMsg(titulo, texto) { $('rvw-body').innerHTML = '<h1 class="wide" id="rvw-t">' + titulo + '</h1><p>' + texto + '</p><a class="btn ghost" href="' + esc(waLink('Olá, Cabide Raro! Quero avaliar minha compra, mas o link não funcionou.')) + '" target="_blank" rel="noopener">Falar no WhatsApp</a>'; }
+  function openAvaliar(id, t) {
+    AV = { id: id, t: t, itens: [], nome: '' };
+    $('rvw').hidden = false; $('rvw').scrollTop = 0; document.body.classList.add('lock');
+    $('rvw-body').innerHTML = '<p>Carregando seu pedido...</p>';
+    if (!API) { avMsg('Sem conexão', 'Não foi possível carregar seu pedido agora. Tente de novo em instantes.'); return; }
+    fetch(API + '/avaliar/' + encodeURIComponent(id) + '?t=' + encodeURIComponent(t), { cache: 'no-store' })
+      .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+      .then(function (res) {
+        if (!res.ok) {
+          if (res.j && res.j.erro === 'pedido_nao_pago') avMsg('Pedido ainda não pago', 'Este pedido ainda não teve o pagamento confirmado, então ainda não pode ser avaliado.');
+          else avMsg('Link inválido', 'Não encontramos este pedido. Confira se o link veio completo ou fale com a gente no WhatsApp.');
+          return;
+        }
+        AV.itens = res.j.itens || []; AV.nome = res.j.nome || ''; renderAvaliar();
+      })
+      .catch(function () { avMsg('Sem conexão', 'Não foi possível carregar seu pedido agora. Tente de novo em instantes.'); });
+  }
+  function renderAvaliar() {
+    var h = '<h1 class="wide" id="rvw-t">Avalie sua compra</h1><p>Pedido ' + esc(AV.id) + '. Sua avaliação aparece no site com o seu primeiro nome e o selo “Compra verificada”.</p>';
+    h += AV.itens.map(function (it, k) {
+      var f = it.feita || {};
+      return '<form class="rv-form" data-k="' + k + '" novalidate><h2>' + esc(it.nome) + '<small>' + esc(it.marca) + ' · tamanho ' + esc(it.s) + '</small></h2>' +
+        (it.feita ? '<p class="rv-done">Avaliação enviada, obrigado! Se quiser, altere e envie de novo.</p>' : '') +
+        '<fieldset><legend>Sua nota</legend><div class="pick-stars" data-nota="' + (f.nota || 0) + '">' + [1, 2, 3, 4, 5].map(function (n) {
+          return '<button type="button" data-n="' + n + '" aria-label="' + n + (n === 1 ? ' estrela' : ' estrelas') + '" class="' + (n <= (f.nota || 0) ? 'on' : '') + '"><svg aria-hidden="true"><use href="#i-star"/></svg></button>';
+        }).join('') + '</div></fieldset>' +
+        '<fieldset><legend>Você recomenda esta peça?</legend><div class="chips">' + chip('rec' + k, 'sim', 'Sim', f.recomenda === true) + chip('rec' + k, 'nao', 'Não', f.recomenda === false) + '</div></fieldset>' +
+        '<fieldset><legend>Como ficou o tamanho?</legend><div class="chips">' + chip('tam' + k, 'pequeno', 'Ficou pequeno', f.tamanho === 'pequeno') + chip('tam' + k, 'certo', 'Na medida', f.tamanho === 'certo') + chip('tam' + k, 'grande', 'Ficou grande', f.tamanho === 'grande') + '</div></fieldset>' +
+        '<label><span class="lab">Comentário (opcional)</span><textarea name="texto" maxlength="600" placeholder="O que achou da peça, do tecido, do caimento, da entrega...">' + esc(f.texto || '') + '</textarea></label>' +
+        '<label><span class="lab">Seu primeiro nome</span><input type="text" name="nome" maxlength="30" autocomplete="given-name" value="' + esc(AV.nome) + '"></label>' +
+        '<p class="err" hidden></p><button class="btn" type="submit">' + (it.feita ? 'Atualizar avaliação' : 'Enviar avaliação') + '</button></form>';
+    }).join('');
+    $('rvw-body').innerHTML = h;
+  }
+  $('rvw-body').addEventListener('click', function (e) {
+    var b = e.target.closest('.pick-stars button'); if (!b) return;
+    var box = b.parentNode, n = +b.dataset.n; box.dataset.nota = n;
+    [].forEach.call(box.children, function (x) { x.classList.toggle('on', +x.dataset.n <= n); });
+  });
+  $('rvw-body').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = e.target, k = +f.dataset.k, it = AV.itens[k], err = f.querySelector('.err');
+    var n = +f.querySelector('.pick-stars').dataset.nota, rec = f.querySelector('input[name="rec' + k + '"]:checked'), tam = f.querySelector('input[name="tam' + k + '"]:checked');
+    if (!n || !rec || !tam) { err.hidden = false; err.textContent = 'Escolha a nota, se recomenda e como ficou o tamanho.'; return; }
+    err.hidden = true;
+    var btn = f.querySelector('button[type=submit]'); btn.disabled = true; btn.textContent = 'Enviando...';
+    var body = { pedido: AV.id, t: AV.t, id: it.id, nota: n, recomenda: rec.value === 'sim', tamanho: tam.value, texto: f.querySelector('textarea').value, nome: f.querySelector('input[name=nome]').value };
+    fetch(API + '/avaliacao', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) })
+      .then(function (r) {
+        if (!r.ok) throw new Error('falha');
+        it.feita = { nota: n, recomenda: body.recomenda, tamanho: body.tamanho, texto: body.texto };
+        AV.nome = body.nome; renderAvaliar();
+        var nf = $('rvw-body').querySelector('form[data-k="' + k + '"]'); if (nf) nf.scrollIntoView({ block: 'center' });
+        toast('Obrigado pela avaliação!'); loadRevs();
+      })
+      .catch(function () { btn.disabled = false; btn.textContent = it.feita ? 'Atualizar avaliação' : 'Enviar avaliação'; err.hidden = false; err.textContent = 'Não foi possível enviar agora. Tente de novo.'; });
+  });
+  $('rvw-back').addEventListener('click', function () { try { history.replaceState(null, '', location.pathname + location.search); } catch (e2) {} closeAvaliar(); });
+
   // ---------- Estatísticas anônimas (painel da loja) ----------
   // Conta visitas, peças vistas, sacola e checkout. Sem nome, e-mail ou IP: só um número aleatório por aparelho.
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
@@ -1228,7 +1420,7 @@ body.lock { overflow: hidden; }
   if (!sess('cr_visita')) { sess('cr_visita', '1'); track('visita'); }
 
   if (!API) setPay(false);
-  render(); renderBag(); route(); checkReturn();
+  render(); renderBag(); route(); checkReturn(); loadRevs();
   if (API) {
     var ctl = window.AbortController ? new AbortController() : null;
     setTimeout(function () { if (ctl) ctl.abort(); }, 6000);
