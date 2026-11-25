@@ -294,6 +294,7 @@ footer button.link { background: none; border: 0; padding: 0; color: inherit; cu
 footer button.link:hover { color: var(--branco); text-decoration: underline; }
 .legal { border-top: 1px solid rgba(255,255,255,.15); }
 .legal .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-block: 18px; font-size: 12px; color: rgba(255,255,255,.6); grid-template-columns: none; }
+.adm { display: inline-flex; flex-wrap: wrap; gap: 8px; }
 .adm-btn { display: inline-flex; align-items: center; gap: 6px; padding: 7px 12px; border: 1px solid rgba(255,255,255,.35); border-radius: 6px; color: #fff; font-weight: 600; text-decoration: none; }
 .adm-btn:hover { background: rgba(255,255,255,.1); }
 .adm-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; }
@@ -478,6 +479,7 @@ body.lock { overflow: hidden; }
   <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
   <symbol id="i-bag" viewBox="0 0 24 24"><path d="M5 8h14l-1 12H6L5 8Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8.8 8.2c.2-.5.5-.5.8-.5h.5c.2 0 .4 0 .6.5l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.3.6 1.4 2 3 2.6.2.1.4 0 .5-.1l.7-.8c.2-.2.4-.2.6-.1l1.6.8c.2.1.4.2.4.4 0 .3-.1 1.2-.9 1.7-.6.4-1.6.6-3.1 0a9.4 9.4 0 0 1-4.6-4.5c-.6-1.2-.4-2.6-.2-3.4Z" fill="currentColor"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="3.8" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4.5 20.5c.8-3.9 3.8-6 7.5-6s6.7 2.1 7.5 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
   <symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10.5" width="14" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 10.5V7.5a3.5 3.5 0 0 1 7 0v3" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
   <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4-4.7-4.4 6.4-.8z" fill="currentColor"/></symbol>
   <symbol id="i-ok" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -517,7 +519,7 @@ body.lock { overflow: hidden; }
   <section class="banners" aria-label="Destaques">
     <div class="wrap">
       <div class="bn bn-main">
-        <img src="img/hazel-editorial.jpg" alt="Modelo vestindo o conjunto Hazel off white da Vix Paula Hermanny">
+        <img id="hero-img" src="img/hazel-editorial.jpg" alt="Modelo vestindo o conjunto Hazel off white da Vix Paula Hermanny">
         <button class="bn-hit" type="button" data-nav="tudo" aria-label="Ver todas as peças"></button>
         <div class="top">
           <span class="pill"><span class="dot" aria-hidden="true"></span><span id="hero-prazo">Só até 31 de dezembro</span></span>
@@ -543,12 +545,12 @@ body.lock { overflow: hidden; }
         </div>
       </div>
       <div class="bn bn-side">
-        <img src="img/lilou-verde.jpg" alt="Saída Lilou da Vix Paula Hermanny">
+        <img id="bn-praia-img" src="img/lilou-verde.jpg" alt="Saída Lilou da Vix Paula Hermanny">
         <button class="bn-hit" type="button" data-nav="praia" aria-label="Ver moda praia"></button>
         <div class="lab"><span class="off2" id="bn-praia-off">30% OFF</span><b>Moda praia</b><span id="bn-praia">Saídas e tops Vix</span><em id="bn-praia-min"></em></div>
       </div>
       <div class="bn bn-side">
-        <img src="img/produtos/res-07.jpg" alt="Tênis Reserva R-Osaka" class="fit" style="--fit-bg:#c7beb3">
+        <img id="bn-calc-img" src="img/produtos/res-07.jpg" alt="Tênis Reserva R-Osaka" class="fit" style="--fit-bg:#c7beb3">
         <button class="bn-hit" type="button" data-nav="calcados" aria-label="Ver calçados"></button>
         <div class="lab"><span class="off2" id="bn-calc-off">30% OFF</span><b>Calçados</b><span id="bn-calc">Tênis e mocassins Reserva</span><em id="bn-calc-min"></em></div>
       </div>
@@ -632,7 +634,7 @@ body.lock { overflow: hidden; }
     <div><h3>Marcas</h3><ul id="f-brands"></ul></div>
     <div><h3>Atendimento</h3><ul><li><a id="wa-foot" href="#" target="_blank" rel="noopener">WhatsApp</a></li><li><button class="link" type="button" data-scroll="como-comprar">Como comprar</button></li><li>Pix ou 3x sem juros</li><li>Frete grátis</li></ul></div>
   </div>
-  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026 · CNPJ 46.882.719/0001-02</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span><a class="adm-btn" href="https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev/pedidos" target="_blank" rel="noopener nofollow"><svg aria-hidden="true"><use href="#i-lock"/></svg>Área da loja</a></div></div>
+  <div class="legal"><div class="wrap gutter" style="padding-left:0;padding-right:0"><span>Cabide Raro, 2026 · CNPJ 46.882.719/0001-02</span><span>Marcas citadas pertencem aos seus donos. Revendemos peças originais.</span><span class="adm"><a class="adm-btn" href="https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev/pedidos" target="_blank" rel="noopener nofollow"><svg aria-hidden="true"><use href="#i-lock"/></svg>Área da loja</a><a class="adm-btn" href="https://cabide-raro-pagamentos.cabide-raro-pagamentos.workers.dev/funcionario" target="_blank" rel="noopener nofollow"><svg aria-hidden="true"><use href="#i-user"/></svg>Área do funcionário</a></span></div></div>
 </footer>
 
 <div class="scrim" id="scrim" hidden></div>
@@ -707,6 +709,7 @@ body.lock { overflow: hidden; }
   var BRL = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
   var SIZE_ORDER = ['PP', 'P', 'M', 'G', 'GG'];
   var BRAND_ORDER = ['FARM', 'Animale', 'Vix Paula Hermanny', 'Reserva', 'Dress To'];
+  function brandKey(b) { var i = BRAND_ORDER.indexOf(b); return i >= 0 ? i : 100; }
   var CALC = ['Tênis', 'Sapatos e mocassins', 'Sandálias'];
   var PRICES = [
     { k: 'a', label: 'Até R$ 300', min: 0, max: 300 },
@@ -722,19 +725,29 @@ body.lock { overflow: hidden; }
   function sizeKey(s) { var i = SIZE_ORDER.indexOf(s); return i >= 0 ? i : 100 + Number(s); }
   function instText(v) { return SJ > 1 ? 'ou ' + SJ + 'x de ' + money(v / SJ) + ' sem juros' : 'ou ' + PARC + 'x de ' + money(v / PARC); }
 
-  var P = RAW.map(function (p, i) {
+  // fotos enviadas pela Área do funcionário ficam no servidor (/foto/...); as antigas, aqui no site (img/...)
+  function foto(u) { u = String(u || ''); return u.indexOf('/foto/') === 0 ? API + u : u; }
+  var P, ALL, BY_ID;
+  function montar(lista) {
+  P = lista.map(function (p, i) {
     var preco = typeof p.preco === 'number' ? p.preco : Math.max(Math.round(p.original * (1 - (CFG.desconto || 0)) / 10) * 10 - 0.10, 9.9);
     var sizes = p.tamanhos.map(function (t) { return { s: String(t[0]), q: Number(t[1]) || 0 }; }).filter(function (t) { return t.q > 0; }).sort(function (a, b) { return sizeKey(a.s) - sizeKey(b.s); });
     var stock = sizes.reduce(function (a, t) { return a + t.q; }, 0);
-    var nf = (window.CR_FOTOS || {})[p.id] || 1, imgs = [];
-    for (var k = 1; k <= nf; k++) imgs.push('img/produtos/' + p.id + (k === 1 ? '' : '-' + k) + '.jpg');
-    if (p.img) imgs[0] = p.img;
+    var imgs = [];
+    if (p.fotos && p.fotos.length) imgs = p.fotos.map(foto);
+    else {
+      var nf = (window.CR_FOTOS || {})[p.id] || 1;
+      for (var k = 1; k <= nf; k++) imgs.push('img/produtos/' + p.id + (k === 1 ? '' : '-' + k) + '.jpg');
+      if (p.img) imgs[0] = p.img;
+    }
     return Object.assign({}, p, { idx: i, preco: preco, sizes: sizes, stock: stock, pct: Math.round((1 - preco / p.original) * 100), img: imgs[0], imgs: imgs, search: norm(p.nome + ' ' + p.marca + ' ' + p.categoria + ' ' + p.departamento + (p.praia ? ' moda praia' : '')) });
   }).filter(function (p) { return p.stock > 0; });
   // produtos "oculto" (ex.: teste de pagamento) só abrem pelo link direto, fora da vitrine
-  var ALL = P;
+  ALL = P;
   P = ALL.filter(function (p) { return !p.oculto; });
-  var BY_ID = {}; ALL.forEach(function (p) { BY_ID[p.id] = p; });
+  BY_ID = {}; ALL.forEach(function (p) { BY_ID[p.id] = p; });
+  }
+  montar(RAW);
 
   // ---------- WhatsApp ----------
   function waLink(text) { var n = String(CFG.whatsapp || '').replace(/\D/g, ''); return 'https://wa.me/' + n + '?text=' + encodeURIComponent(text); }
@@ -742,7 +755,6 @@ body.lock { overflow: hidden; }
   $('wa-foot').href = $('wa-top').href;
   document.querySelectorAll('.wa-link').forEach(function (a) { a.href = waLink('Olá, Cabide Raro! Quero saber das condições para compras maiores ou atacado.'); });
   ['cidade', 'cidade-2'].forEach(function (id) { if (CFG.cidade) $(id).textContent = CFG.cidade; });
-  $('ann-off').textContent = Math.round((CFG.desconto || 0) * 100) + '%';
 
   // ---------- Filters state ----------
   var F = { q: '', dept: new Set(), cat: new Set(), brand: new Set(), size: new Set(), price: new Set(), praia: false };
@@ -801,7 +813,7 @@ body.lock { overflow: hidden; }
     var set = {}; P.forEach(function (p) { DIMS[dim](p).forEach(function (v) { set[v] = true; }); });
     var vals = Object.keys(set);
     if (dim === 'size') vals.sort(function (a, b) { return sizeKey(a) - sizeKey(b); });
-    else if (dim === 'brand') vals.sort(function (a, b) { return BRAND_ORDER.indexOf(a) - BRAND_ORDER.indexOf(b); });
+    else if (dim === 'brand') vals.sort(function (a, b) { return brandKey(a) - brandKey(b) || a.localeCompare(b, 'pt-BR'); });
     else if (dim === 'price') vals = PRICES.map(function (r) { return r.k; }).filter(function (k) { return set[k]; });
     else vals.sort(function (a, b) { return a.localeCompare(b, 'pt-BR'); });
     return vals;
@@ -862,7 +874,7 @@ body.lock { overflow: hidden; }
 
   function renderBrands() {
     var counts = {}; P.forEach(function (p) { counts[p.marca] = (counts[p.marca] || 0) + 1; });
-    var brands = BRAND_ORDER.filter(function (b) { return counts[b]; });
+    var brands = Object.keys(counts).sort(function (a, b) { return brandKey(a) - brandKey(b) || a.localeCompare(b, 'pt-BR'); });
     $('brand-row').innerHTML = brands.map(function (b) {
       var on = F.brand.size === 1 && F.brand.has(b);
       return '<button class="brand-tile" type="button" data-brand="' + esc(b) + '" aria-pressed="' + on + '"><b>' + esc(b) + '</b><span class="num">' + counts[b] + (counts[b] === 1 ? ' peça' : ' peças') + '</span></button>';
@@ -1224,21 +1236,34 @@ body.lock { overflow: hidden; }
   var tt;
   function toast(m) { var el = $('toast'); el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(function () { el.hidden = true; }, 1800); }
 
-  // ---------- Banner counts ----------
+  // ---------- Capa e banners ----------
+  var CAPA = {};
+  function capa() {
+  $('ann-off').textContent = Math.round((CFG.desconto || 0) * 100) + '%';
+  [['hero', 'hero-img'], ['praia', 'bn-praia-img'], ['calcados', 'bn-calc-img']].forEach(function (b) {
+    if (!CAPA[b[0]]) return;
+    var img = $(b[1]); img.src = foto(CAPA[b[0]]); img.classList.remove('fit');
+  });
   var off = Math.round((CFG.desconto || 0) * 100) + '% OFF';
   ['hero-off', 'bn-praia-off', 'bn-calc-off'].forEach(function (id) { $(id).textContent = off; });
   $('hero-cta').textContent = 'Ver as ' + P.length + ' peças';
   var praia = P.filter(function (p) { return p.praia; }), calc = P.filter(function (p) { return CALC.indexOf(p.categoria) >= 0; });
   function minPrice(list) { return Math.min.apply(null, list.map(function (p) { return p.preco; })); }
-  $('bn-praia').textContent = praia.length + ' peças Vix Paula Hermanny';
-  $('bn-calc').textContent = calc.length + ' pares Reserva';
+  var marcasDe = function (l) { var m = []; l.forEach(function (p) { if (m.indexOf(p.marca) < 0) m.push(p.marca); }); return m.length === 1 ? ' ' + m[0] : ''; };
+  $('bn-praia').textContent = praia.length + (praia.length === 1 ? ' peça' : ' peças') + marcasDe(praia);
+  $('bn-calc').textContent = calc.length + (calc.length === 1 ? ' par' : ' pares') + marcasDe(calc);
   $('bn-praia-min').textContent = praia.length ? 'a partir de ' + money(minPrice(praia)) : '';
   $('bn-calc-min').textContent = calc.length ? 'a partir de ' + money(minPrice(calc)) : '';
   // peça em destaque na etiqueta da capa
   var hero = BY_ID[CFG.destaque || 'vix-01'] || P[0];
+  $('hero-tag').hidden = !hero;
+  if (hero) {
   $('hero-tag').href = '#p-' + hero.id;
   $('hero-tag-b').textContent = hero.marca; $('hero-tag-n').textContent = hero.nome;
   $('hero-tag-from').textContent = money(hero.original); $('hero-tag-now').textContent = money(hero.preco);
+  }
+  }
+  capa();
   // prazo real da liquidação
   (function () {
     var fim = new Date(CFG.fimDaPromo || '2026-12-31T23:59:59');
@@ -1272,6 +1297,7 @@ body.lock { overflow: hidden; }
   // Só quem tem pedido pago avalia (o link leva o número do pedido e um código do servidor).
   var REVS = { loja: null, produtos: {}, itens: [] };
   var NOMES = {}; (window.CR_PRODUTOS || []).forEach(function (p) { NOMES[p.id] = p.nome; });
+  function nomesDe(lista) { lista.forEach(function (p) { NOMES[p.id] = p.nome; }); }
   var TAM = { pequeno: 'Ficou pequeno', certo: 'Na medida', grande: 'Ficou grande' };
   function stars(n, size) {
     var s = '<svg aria-hidden="true"><use href="#i-star"/></svg>', five = s + s + s + s + s;
@@ -1422,10 +1448,25 @@ body.lock { overflow: hidden; }
 
   if (!API) setPay(false);
   render(); renderBag(); route(); checkReturn(); loadRevs();
+  function aplicarCatalogo(c) {
+    if (!c || !Array.isArray(c.produtos) || !c.produtos.length) return;
+    if (c.config && typeof c.config.desconto === 'number') CFG.desconto = c.config.desconto;
+    CAPA = c.capa || {};
+    if (CAPA.destaque) CFG.destaque = CAPA.destaque;
+    montar(c.produtos); nomesDe(c.produtos);
+    BAG = BAG.filter(function (l) { return BY_ID[l.id] && stockOf(l.id, l.s) > 0; }).map(function (l) { l.q = Math.min(l.q, stockOf(l.id, l.s)); return l; });
+    saveBag();
+    capa(); render(); renderBag();
+    if (cur) { if (BY_ID[cur.id]) openPdp(cur.id); else closePdp(); } else route();
+  }
   if (API) {
     var ctl = window.AbortController ? new AbortController() : null;
     setTimeout(function () { if (ctl) ctl.abort(); }, 6000);
-    fetch(API + '/estoque', { cache: 'no-store', signal: ctl ? ctl.signal : undefined })
+    var sinal = ctl ? ctl.signal : undefined;
+    fetch(API + '/catalogo', { cache: 'no-store', signal: sinal })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(aplicarCatalogo, function () {})
+      .then(function () { return fetch(API + '/estoque', { cache: 'no-store', signal: sinal }); })
       .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
       .then(function (est) { applyStock(est); setPay(true); render(); renderBag(); })
       .catch(function () { setPay(false); });
